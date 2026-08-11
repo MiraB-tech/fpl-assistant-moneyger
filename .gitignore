@@ -1,0 +1,25 @@
+# --- Python (pipeline/) ---
+pipeline/.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Node (frontend/) ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# --- Env / secrets ---
+.env
+.env.local
+*.local
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log
