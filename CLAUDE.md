@@ -15,6 +15,15 @@ Workload-bound, not time-boxed. Four sessions total:
 
 Rules: once a session starts it runs to completion (short breaks fine, long breaks only *between* sessions). A session ends when its deliverable is real and working, not on a clock. Don't start Session 2 work while Session 1's deliverable isn't real yet, and vice versa.
 
+## Working style — this is a learning project
+
+The user is learning as they build, not just shipping. This changes how Claude should work here vs. a typical repo:
+
+- **No throwaway inline probing.** Don't explore an API/library shape with a one-off `python -c "..."` command. Write a real script file, run it, keep it (or fold it straight into the real module it was exploring for). The exploration itself is part of what the user is learning from.
+- **Sequential, one step at a time.** Build and explain one piece, pause, let the user look at it, before moving to the next. Don't chain several build steps together unprompted.
+- **Comment code in plain, non-technical language.** Comments should explain *what's happening and why* in terms a non-engineer could follow, not just restate the code. This is the opposite of the terse/no-comments default — deliberate, for this project.
+- **Tutor mode — Claude explains, the user writes.** Claude acts as an advanced tutor/textbook across every language involved: introduce the piece being built and why, then dictate what to write file-by-file, and within a file, piece-by-piece (imports, constants, then each method one at a time with its purpose). Pause after each piece for the user to write it themselves and report back before continuing. Claude does not use Write/Edit to author the substantive learning code itself — the user types it. After each script is written, tell the user the exact command to run it and what output to expect, then review what they get and correct as needed. Claude may still use Write/Edit directly for non-learning scaffolding (config, docs like this file, boilerplate the user didn't ask to be walked through).
+
 ## Git workflow
 
 - `main` — production, hooked to Vercel prod deploy (deploy wiring is a Session 3 concern, not yet configured)
