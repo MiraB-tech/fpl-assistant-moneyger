@@ -1,0 +1,4978 @@
+[
+  {
+    "id": 1,
+    "name": "Raya",
+    "position": "Goalkeeper",
+    "team": "ARS",
+    "price": 6.0,
+    "xP": 0.24
+  },
+  {
+    "id": 2,
+    "name": "Arrizabalaga",
+    "position": "Goalkeeper",
+    "team": "ARS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 3,
+    "name": "Meslier",
+    "position": "Goalkeeper",
+    "team": "ARS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 4,
+    "name": "Gabriel",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 8.0,
+    "xP": 0.23
+  },
+  {
+    "id": 5,
+    "name": "J.Timber",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 6.5,
+    "xP": 0.04
+  },
+  {
+    "id": 6,
+    "name": "Saliba",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 7,
+    "name": "Lewis-Skelly",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.2
+  },
+  {
+    "id": 8,
+    "name": "Calafiori",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 5.6,
+    "xP": 0.32
+  },
+  {
+    "id": 9,
+    "name": "Hincapie",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 5.4,
+    "xP": 0.07
+  },
+  {
+    "id": 10,
+    "name": "White",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.4
+  },
+  {
+    "id": 11,
+    "name": "Mosquera",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 12,
+    "name": "Saka",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 9.5,
+    "xP": 0.41
+  },
+  {
+    "id": 13,
+    "name": "Rice",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 7.5,
+    "xP": 0.19
+  },
+  {
+    "id": 14,
+    "name": "Eze",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.4,
+    "xP": 0.11
+  },
+  {
+    "id": 15,
+    "name": "\u00d8degaard",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.6,
+    "xP": 0.38
+  },
+  {
+    "id": 16,
+    "name": "Madueke",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.4,
+    "xP": 0.1
+  },
+  {
+    "id": 17,
+    "name": "Merino",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.9,
+    "xP": 0.2
+  },
+  {
+    "id": 18,
+    "name": "Martinelli",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.4,
+    "xP": 0.04
+  },
+  {
+    "id": 19,
+    "name": "Zubimendi",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.4,
+    "xP": 0.09
+  },
+  {
+    "id": 20,
+    "name": "Dowman",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.4,
+    "xP": 0.04
+  },
+  {
+    "id": 22,
+    "name": "Nwaneri",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 23,
+    "name": "F\u00e1bio Vieira",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 24,
+    "name": "Nelson",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 25,
+    "name": "Gy\u00f6keres",
+    "position": "Forward",
+    "team": "ARS",
+    "price": 7.4,
+    "xP": 0.04
+  },
+  {
+    "id": 26,
+    "name": "Havertz",
+    "position": "Forward",
+    "team": "ARS",
+    "price": 7.5,
+    "xP": 0.28
+  },
+  {
+    "id": 27,
+    "name": "G.Jesus",
+    "position": "Forward",
+    "team": "ARS",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 31,
+    "name": "Konsa",
+    "position": "Defender",
+    "team": "ARS",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 452,
+    "name": "Bruno G.",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.9,
+    "xP": 0.04
+  },
+  {
+    "id": 557,
+    "name": "Tzolis",
+    "position": "Midfielder",
+    "team": "ARS",
+    "price": 6.5,
+    "xP": 0.28
+  },
+  {
+    "id": 28,
+    "name": "Martinez",
+    "position": "Goalkeeper",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 29,
+    "name": "M.Bizot",
+    "position": "Goalkeeper",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 30,
+    "name": "Digne",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 32,
+    "name": "Cash",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.1
+  },
+  {
+    "id": 33,
+    "name": "Mings",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.08
+  },
+  {
+    "id": 34,
+    "name": "Pau",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.1
+  },
+  {
+    "id": 35,
+    "name": "Bogarde",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.08
+  },
+  {
+    "id": 36,
+    "name": "Maatsen",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.11
+  },
+  {
+    "id": 37,
+    "name": "Lindel\u00f6f",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.07
+  },
+  {
+    "id": 38,
+    "name": "A.Garc\u00eda",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 39,
+    "name": "Nedeljkovic",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 41,
+    "name": "Buend\u00eda",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 6.0,
+    "xP": 0.18
+  },
+  {
+    "id": 44,
+    "name": "Bailey",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 45,
+    "name": "McGinn",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 46,
+    "name": "Barkley",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 47,
+    "name": "Kamara",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 48,
+    "name": "Onana",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 49,
+    "name": "Iling Jr",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 50,
+    "name": "Burrowes",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 51,
+    "name": "George Hemmings",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.16
+  },
+  {
+    "id": 52,
+    "name": "Alysson",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.07
+  },
+  {
+    "id": 53,
+    "name": "Manzambi",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 54,
+    "name": "Gomes",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 5.5,
+    "xP": 0.03
+  },
+  {
+    "id": 55,
+    "name": "Watkins",
+    "position": "Forward",
+    "team": "AVL",
+    "price": 7.9,
+    "xP": 0.04
+  },
+  {
+    "id": 56,
+    "name": "Abraham",
+    "position": "Forward",
+    "team": "AVL",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 160,
+    "name": "Garnacho",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 6.0,
+    "xP": 0.07
+  },
+  {
+    "id": 166,
+    "name": "N.Jackson",
+    "position": "Forward",
+    "team": "AVL",
+    "price": 6.5,
+    "xP": 0.04
+  },
+  {
+    "id": 582,
+    "name": "Madjo",
+    "position": "Forward",
+    "team": "AVL",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 596,
+    "name": "Ruggeri",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.07
+  },
+  {
+    "id": 597,
+    "name": "Suzuki",
+    "position": "Goalkeeper",
+    "team": "AVL",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 606,
+    "name": "Rowe",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 607,
+    "name": "Lynch",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 611,
+    "name": "Wan-Bissaka",
+    "position": "Defender",
+    "team": "AVL",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 618,
+    "name": "Goretzka",
+    "position": "Midfielder",
+    "team": "AVL",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 57,
+    "name": "Petrovi\u0107",
+    "position": "Goalkeeper",
+    "team": "BOU",
+    "price": 4.5,
+    "xP": 0.26
+  },
+  {
+    "id": 58,
+    "name": "Forster",
+    "position": "Goalkeeper",
+    "team": "BOU",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 59,
+    "name": "Dennis",
+    "position": "Goalkeeper",
+    "team": "BOU",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 60,
+    "name": "Hill",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 61,
+    "name": "Truffert",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 62,
+    "name": "Diakit\u00e9",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 63,
+    "name": "Milosavljevi\u0107",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 64,
+    "name": "Smith",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 65,
+    "name": "J.Araujo",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 66,
+    "name": "Soler",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 67,
+    "name": "Rayan",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 6.5,
+    "xP": 0.27
+  },
+  {
+    "id": 68,
+    "name": "Tavernier",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 6.0,
+    "xP": 0.49
+  },
+  {
+    "id": 69,
+    "name": "Scott",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 6.0,
+    "xP": 0.26
+  },
+  {
+    "id": 70,
+    "name": "Kluivert",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 6.0,
+    "xP": 0.28
+  },
+  {
+    "id": 71,
+    "name": "Cook",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 72,
+    "name": "Gannon-Doak",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 73,
+    "name": "Adams",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.18
+  },
+  {
+    "id": 74,
+    "name": "Brooks",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 75,
+    "name": "Christie",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 76,
+    "name": "T\u00f3th.A",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.18
+  },
+  {
+    "id": 77,
+    "name": "Adli",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 78,
+    "name": "Kroupi.Jr",
+    "position": "Midfielder",
+    "team": "BOU",
+    "price": 7.5,
+    "xP": 0.14
+  },
+  {
+    "id": 79,
+    "name": "Evanilson",
+    "position": "Forward",
+    "team": "BOU",
+    "price": 6.0,
+    "xP": 0.32
+  },
+  {
+    "id": 80,
+    "name": "Enes \u00dcnal",
+    "position": "Forward",
+    "team": "BOU",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 81,
+    "name": "Rodr\u00edguez",
+    "position": "Forward",
+    "team": "BOU",
+    "price": 6.0,
+    "xP": 0.14
+  },
+  {
+    "id": 566,
+    "name": "Silva",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.26
+  },
+  {
+    "id": 573,
+    "name": "Sanchez",
+    "position": "Defender",
+    "team": "BOU",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 608,
+    "name": "Jebbison",
+    "position": "Forward",
+    "team": "BOU",
+    "price": 5.0,
+    "xP": 0.25
+  },
+  {
+    "id": 615,
+    "name": "Di Gregorio",
+    "position": "Goalkeeper",
+    "team": "BOU",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 82,
+    "name": "Kelleher",
+    "position": "Goalkeeper",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.37
+  },
+  {
+    "id": 83,
+    "name": "Valdimarsson",
+    "position": "Goalkeeper",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 84,
+    "name": "Collins",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 5.5,
+    "xP": 0.39
+  },
+  {
+    "id": 85,
+    "name": "Van den Berg",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 86,
+    "name": "Lewis-Potter",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.5,
+    "xP": 0.54
+  },
+  {
+    "id": 87,
+    "name": "Ajer",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.4
+  },
+  {
+    "id": 88,
+    "name": "Kayode",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.6,
+    "xP": 0.55
+  },
+  {
+    "id": 89,
+    "name": "Henry",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 90,
+    "name": "Hickey",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.17
+  },
+  {
+    "id": 92,
+    "name": "Ji-soo",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 93,
+    "name": "Schuster",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 94,
+    "name": "Schade",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 6.0,
+    "xP": 0.35
+  },
+  {
+    "id": 95,
+    "name": "O.Dango",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 6.5,
+    "xP": 0.32
+  },
+  {
+    "id": 96,
+    "name": "Damsgaard",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.5,
+    "xP": 0.26
+  },
+  {
+    "id": 97,
+    "name": "Jensen",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.5,
+    "xP": 0.39
+  },
+  {
+    "id": 98,
+    "name": "Janelt",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.48
+  },
+  {
+    "id": 99,
+    "name": "Milambo",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 100,
+    "name": "Carvalho",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 102,
+    "name": "Yarmoliuk",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.2
+  },
+  {
+    "id": 103,
+    "name": "Dasilva",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 105,
+    "name": "Anthony",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 6.0,
+    "xP": 0.36
+  },
+  {
+    "id": 106,
+    "name": "Thiago",
+    "position": "Forward",
+    "team": "BRE",
+    "price": 8.0,
+    "xP": 0.36
+  },
+  {
+    "id": 107,
+    "name": "Furo",
+    "position": "Forward",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 108,
+    "name": "Wilson",
+    "position": "Forward",
+    "team": "BRE",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 565,
+    "name": "M.Sangar\u00e9",
+    "position": "Midfielder",
+    "team": "BRE",
+    "price": 5.6,
+    "xP": 0.56
+  },
+  {
+    "id": 620,
+    "name": "Diouf",
+    "position": "Defender",
+    "team": "BRE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 109,
+    "name": "Verbruggen",
+    "position": "Goalkeeper",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 111,
+    "name": "Steele",
+    "position": "Goalkeeper",
+    "team": "BHA",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 113,
+    "name": "F.Kad\u0131o\u011flu",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.4,
+    "xP": 0.04
+  },
+  {
+    "id": 114,
+    "name": "Boscagli",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.25
+  },
+  {
+    "id": 115,
+    "name": "De Cuyper",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.6,
+    "xP": 0.71
+  },
+  {
+    "id": 116,
+    "name": "Dunk",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.25
+  },
+  {
+    "id": 117,
+    "name": "Coppola",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 118,
+    "name": "Igor",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 119,
+    "name": "Costinha",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 120,
+    "name": "Svoboda",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 121,
+    "name": "Mitoma",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 122,
+    "name": "Minteh",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.9,
+    "xP": 0.04
+  },
+  {
+    "id": 123,
+    "name": "Hinshelwood",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 6.0,
+    "xP": 0.68
+  },
+  {
+    "id": 124,
+    "name": "Gro\u00df",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.19
+  },
+  {
+    "id": 125,
+    "name": "Georginio",
+    "position": "Forward",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.29
+  },
+  {
+    "id": 126,
+    "name": "O'Riley",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 127,
+    "name": "Gomez",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.33
+  },
+  {
+    "id": 128,
+    "name": "Buonanotte",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 129,
+    "name": "Ayari",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.16
+  },
+  {
+    "id": 130,
+    "name": "Wieffer",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 132,
+    "name": "Howell",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 133,
+    "name": "Watson",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 134,
+    "name": "Oriola",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 135,
+    "name": "Yohanna",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.1
+  },
+  {
+    "id": 137,
+    "name": "Tzimas",
+    "position": "Forward",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 138,
+    "name": "Kostoulas",
+    "position": "Forward",
+    "team": "BHA",
+    "price": 5.5,
+    "xP": 0.16
+  },
+  {
+    "id": 139,
+    "name": "Ferguson",
+    "position": "Forward",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 328,
+    "name": "Struijk",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 504,
+    "name": "Vuskovic",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.26
+  },
+  {
+    "id": 594,
+    "name": "David",
+    "position": "Forward",
+    "team": "BHA",
+    "price": 6.0,
+    "xP": 0.04
+  },
+  {
+    "id": 600,
+    "name": "Osman",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 5.0,
+    "xP": 0.12
+  },
+  {
+    "id": 605,
+    "name": "Yalcouy\u00e9",
+    "position": "Midfielder",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.09
+  },
+  {
+    "id": 614,
+    "name": "Hadjam",
+    "position": "Defender",
+    "team": "BHA",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 40,
+    "name": "Rogers",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 7.5,
+    "xP": 0.62
+  },
+  {
+    "id": 101,
+    "name": "Henderson",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 136,
+    "name": "Welbeck",
+    "position": "Forward",
+    "team": "CHE",
+    "price": 6.0,
+    "xP": 0.24
+  },
+  {
+    "id": 140,
+    "name": "S\u00e1nchez",
+    "position": "Goalkeeper",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 141,
+    "name": "J\u00f6rgensen",
+    "position": "Goalkeeper",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 142,
+    "name": "James",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.34
+  },
+  {
+    "id": 143,
+    "name": "Chalobah",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 144,
+    "name": "Gusto",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.33
+  },
+  {
+    "id": 145,
+    "name": "Fofana",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 146,
+    "name": "B.Badiashile",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 147,
+    "name": "Tosin",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 148,
+    "name": "Hato",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.32
+  },
+  {
+    "id": 149,
+    "name": "Colwill",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.32
+  },
+  {
+    "id": 150,
+    "name": "M.Sarr",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 151,
+    "name": "Acheampong",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.38
+  },
+  {
+    "id": 152,
+    "name": "Palestra",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 154,
+    "name": "Palmer",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 9.6,
+    "xP": 0.65
+  },
+  {
+    "id": 155,
+    "name": "Enzo",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 7.0,
+    "xP": 0.29
+  },
+  {
+    "id": 156,
+    "name": "Neto",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 6.5,
+    "xP": 0.35
+  },
+  {
+    "id": 157,
+    "name": "Est\u00eav\u00e3o",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 6.5,
+    "xP": 0.27
+  },
+  {
+    "id": 158,
+    "name": "Gittens",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 6.0,
+    "xP": 0.24
+  },
+  {
+    "id": 159,
+    "name": "Caicedo",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 161,
+    "name": "Lavia",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 163,
+    "name": "D.Essugo",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 164,
+    "name": "Quenda",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.27
+  },
+  {
+    "id": 165,
+    "name": "Jo\u00e3o Pedro",
+    "position": "Forward",
+    "team": "CHE",
+    "price": 7.6,
+    "xP": 0.63
+  },
+  {
+    "id": 168,
+    "name": "Marc Guiu",
+    "position": "Forward",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 169,
+    "name": "Mheuka",
+    "position": "Forward",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 170,
+    "name": "Emegha",
+    "position": "Forward",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 200,
+    "name": "Lacroix",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 6.0,
+    "xP": 0.47
+  },
+  {
+    "id": 560,
+    "name": "Penders",
+    "position": "Goalkeeper",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 561,
+    "name": "Anselmino",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 568,
+    "name": "Barco",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 578,
+    "name": "Mudryk",
+    "position": "Midfielder",
+    "team": "CHE",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 583,
+    "name": "Chavarria",
+    "position": "Defender",
+    "team": "CHE",
+    "price": 5.0,
+    "xP": 0.28
+  },
+  {
+    "id": 91,
+    "name": "Pinnock",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 104,
+    "name": "Onyeka",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 110,
+    "name": "Rushworth",
+    "position": "Goalkeeper",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.34
+  },
+  {
+    "id": 171,
+    "name": "Dovin",
+    "position": "Goalkeeper",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 172,
+    "name": "Wilson",
+    "position": "Goalkeeper",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 173,
+    "name": "Thomas",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.38
+  },
+  {
+    "id": 174,
+    "name": "Kitching",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 175,
+    "name": "van Ewijk",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.34
+  },
+  {
+    "id": 176,
+    "name": "Dasilva",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.34
+  },
+  {
+    "id": 177,
+    "name": "Kesler-Hayden",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 178,
+    "name": "Bidwell",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 179,
+    "name": "Latibeaudiere",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 180,
+    "name": "Woolfenden",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 181,
+    "name": "Brau",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 182,
+    "name": "Amenda",
+    "position": "Defender",
+    "team": "COV",
+    "price": 4.0,
+    "xP": 0.34
+  },
+  {
+    "id": 183,
+    "name": "Rudoni",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 184,
+    "name": "Grimes",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 185,
+    "name": "Sakamoto",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 186,
+    "name": "Mason-Clark",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 187,
+    "name": "Eccles",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 188,
+    "name": "Torp",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.33
+  },
+  {
+    "id": 189,
+    "name": "Shepherd",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 190,
+    "name": "Tchaouna",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.36
+  },
+  {
+    "id": 191,
+    "name": "Borges Rodrigues",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 192,
+    "name": "Andrews",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 193,
+    "name": "Wright",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 194,
+    "name": "Thomas-Asante",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.35
+  },
+  {
+    "id": 195,
+    "name": "Simms",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.34
+  },
+  {
+    "id": 196,
+    "name": "Markelo",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 197,
+    "name": "Bassette",
+    "position": "Forward",
+    "team": "COV",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 492,
+    "name": "Awoniyi",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 575,
+    "name": "Yirenkyi",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.31
+  },
+  {
+    "id": 584,
+    "name": "Hamer",
+    "position": "Midfielder",
+    "team": "COV",
+    "price": 5.5,
+    "xP": 0.27
+  },
+  {
+    "id": 599,
+    "name": "Cherif",
+    "position": "Forward",
+    "team": "COV",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 42,
+    "name": "Guessand",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.12
+  },
+  {
+    "id": 153,
+    "name": "Disasi",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.06
+  },
+  {
+    "id": 198,
+    "name": "Henderson",
+    "position": "Goalkeeper",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.23
+  },
+  {
+    "id": 199,
+    "name": "Benitez",
+    "position": "Goalkeeper",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 201,
+    "name": "Mu\u00f1oz",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 202,
+    "name": "Richards",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.26
+  },
+  {
+    "id": 203,
+    "name": "Canvot",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.22
+  },
+  {
+    "id": 204,
+    "name": "Mitchell",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.23
+  },
+  {
+    "id": 205,
+    "name": "Sosa",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 206,
+    "name": "Chadi Riad",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.4,
+    "xP": 0.12
+  },
+  {
+    "id": 207,
+    "name": "Mingueza",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.05
+  },
+  {
+    "id": 208,
+    "name": "Sarr",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 6.4,
+    "xP": 0.04
+  },
+  {
+    "id": 210,
+    "name": "Wharton",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 211,
+    "name": "Yeremy",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.17
+  },
+  {
+    "id": 212,
+    "name": "Hughes",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 213,
+    "name": "Lerma",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 214,
+    "name": "Kamada",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 215,
+    "name": "Devenny",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 216,
+    "name": "Esse",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 217,
+    "name": "M.Fran\u00e7a",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 4.9,
+    "xP": 0.04
+  },
+  {
+    "id": 218,
+    "name": "Doucour\u00e9",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 219,
+    "name": "J.Rak-Sakyi",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 220,
+    "name": "Cardines",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 221,
+    "name": "Drakes-Thomas",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 222,
+    "name": "Strand Larsen",
+    "position": "Forward",
+    "team": "CRY",
+    "price": 6.0,
+    "xP": 0.18
+  },
+  {
+    "id": 223,
+    "name": "Mateta",
+    "position": "Forward",
+    "team": "CRY",
+    "price": 6.5,
+    "xP": 0.26
+  },
+  {
+    "id": 224,
+    "name": "Nketiah",
+    "position": "Forward",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 225,
+    "name": "Uche",
+    "position": "Forward",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 241,
+    "name": "McNeil",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.5,
+    "xP": 0.16
+  },
+  {
+    "id": 555,
+    "name": "Matthews",
+    "position": "Goalkeeper",
+    "team": "CRY",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 577,
+    "name": "Tomiyasu",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 588,
+    "name": "Khalaili",
+    "position": "Defender",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.17
+  },
+  {
+    "id": 595,
+    "name": "Gozo",
+    "position": "Midfielder",
+    "team": "CRY",
+    "price": 5.0,
+    "xP": 0.06
+  },
+  {
+    "id": 21,
+    "name": "N\u00f8rgaard",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 209,
+    "name": "Johnson",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 6.0,
+    "xP": 0.17
+  },
+  {
+    "id": 226,
+    "name": "Pickford",
+    "position": "Goalkeeper",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.37
+  },
+  {
+    "id": 227,
+    "name": "Travers",
+    "position": "Goalkeeper",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 228,
+    "name": "King",
+    "position": "Goalkeeper",
+    "team": "EVE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 229,
+    "name": "Tarkowski",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 6.0,
+    "xP": 0.35
+  },
+  {
+    "id": 230,
+    "name": "Branthwaite",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.34
+  },
+  {
+    "id": 231,
+    "name": "Keane",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 232,
+    "name": "O'Brien",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 233,
+    "name": "Mykolenko",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 4.5,
+    "xP": 0.35
+  },
+  {
+    "id": 234,
+    "name": "Patterson",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 235,
+    "name": "Aznou",
+    "position": "Defender",
+    "team": "EVE",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 236,
+    "name": "Dewsbury-Hall",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 6.5,
+    "xP": 0.48
+  },
+  {
+    "id": 237,
+    "name": "Ndiaye",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 6.0,
+    "xP": 0.48
+  },
+  {
+    "id": 239,
+    "name": "Garner",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 6.0,
+    "xP": 0.2
+  },
+  {
+    "id": 240,
+    "name": "Iroegbunam",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 242,
+    "name": "George",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.31
+  },
+  {
+    "id": 243,
+    "name": "Alcaraz",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.38
+  },
+  {
+    "id": 244,
+    "name": "Armstrong",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.39
+  },
+  {
+    "id": 245,
+    "name": "Dibling",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 246,
+    "name": "R\u00f6hl",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.0,
+    "xP": 0.29
+  },
+  {
+    "id": 247,
+    "name": "Hackney",
+    "position": "Midfielder",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.27
+  },
+  {
+    "id": 248,
+    "name": "Beto",
+    "position": "Forward",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.22
+  },
+  {
+    "id": 249,
+    "name": "Barry",
+    "position": "Forward",
+    "team": "EVE",
+    "price": 5.5,
+    "xP": 0.45
+  },
+  {
+    "id": 250,
+    "name": "Leno",
+    "position": "Goalkeeper",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.26
+  },
+  {
+    "id": 251,
+    "name": "Lecomte",
+    "position": "Goalkeeper",
+    "team": "FUL",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 252,
+    "name": "McNally",
+    "position": "Goalkeeper",
+    "team": "FUL",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 253,
+    "name": "Andersen",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 254,
+    "name": "Robinson",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.25
+  },
+  {
+    "id": 255,
+    "name": "J.Cuenca",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.28
+  },
+  {
+    "id": 256,
+    "name": "Tete",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 257,
+    "name": "Bassey",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.22
+  },
+  {
+    "id": 258,
+    "name": "Castagne",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.38
+  },
+  {
+    "id": 261,
+    "name": "Iwobi",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.26
+  },
+  {
+    "id": 262,
+    "name": "Smith Rowe",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 263,
+    "name": "Kevin",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.18
+  },
+  {
+    "id": 264,
+    "name": "Bobb",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 265,
+    "name": "Berge",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.0,
+    "xP": 0.25
+  },
+  {
+    "id": 266,
+    "name": "Cairney",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 268,
+    "name": "King",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.39
+  },
+  {
+    "id": 269,
+    "name": "Sessegnon",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.2
+  },
+  {
+    "id": 270,
+    "name": "Reed",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 271,
+    "name": "Muniz",
+    "position": "Forward",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.2
+  },
+  {
+    "id": 272,
+    "name": "Kusi-Asare",
+    "position": "Forward",
+    "team": "FUL",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 569,
+    "name": "Gonzalo",
+    "position": "Forward",
+    "team": "FUL",
+    "price": 6.0,
+    "xP": 0.43
+  },
+  {
+    "id": 570,
+    "name": "Palacios",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.5,
+    "xP": 0.27
+  },
+  {
+    "id": 580,
+    "name": "Charles",
+    "position": "Midfielder",
+    "team": "FUL",
+    "price": 5.0,
+    "xP": 0.18
+  },
+  {
+    "id": 610,
+    "name": "De Fougerolles",
+    "position": "Defender",
+    "team": "FUL",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 273,
+    "name": "Phillips",
+    "position": "Goalkeeper",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 274,
+    "name": "Butland",
+    "position": "Goalkeeper",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 275,
+    "name": "Cartwright",
+    "position": "Goalkeeper",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 276,
+    "name": "Lo-Tutala",
+    "position": "Goalkeeper",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 277,
+    "name": "Egan",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.49
+  },
+  {
+    "id": 278,
+    "name": "Hughes",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 279,
+    "name": "Ajayi",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.68
+  },
+  {
+    "id": 280,
+    "name": "Coyle",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.43
+  },
+  {
+    "id": 281,
+    "name": "Drameh",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.31
+  },
+  {
+    "id": 282,
+    "name": "Giles",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.45
+  },
+  {
+    "id": 283,
+    "name": "Jacob",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 284,
+    "name": "McCarthy",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 285,
+    "name": "McNair",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.28
+  },
+  {
+    "id": 286,
+    "name": "Belloumi",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.39
+  },
+  {
+    "id": 287,
+    "name": "Millar",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.26
+  },
+  {
+    "id": 288,
+    "name": "Dowell",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 289,
+    "name": "Crooks",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.36
+  },
+  {
+    "id": 290,
+    "name": "Slater",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.5
+  },
+  {
+    "id": 291,
+    "name": "Matazo",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 292,
+    "name": "\u00d6m\u00fcr",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 293,
+    "name": "Kamara",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 294,
+    "name": "Zambrano",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 295,
+    "name": "McBurnie",
+    "position": "Forward",
+    "team": "HUL",
+    "price": 5.5,
+    "xP": 0.44
+  },
+  {
+    "id": 296,
+    "name": "Akintola",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 297,
+    "name": "Gyabi",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 298,
+    "name": "Destan",
+    "position": "Forward",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 299,
+    "name": "Burstow",
+    "position": "Forward",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 340,
+    "name": "Gelhardt",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 556,
+    "name": "Targett",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.27
+  },
+  {
+    "id": 563,
+    "name": "Morita",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 572,
+    "name": "Tzolakis",
+    "position": "Goalkeeper",
+    "team": "HUL",
+    "price": 4.5,
+    "xP": 0.53
+  },
+  {
+    "id": 574,
+    "name": "Hjert\u00f8-Dahl",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 576,
+    "name": "Stroud",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.37
+  },
+  {
+    "id": 585,
+    "name": "Herrington",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.28
+  },
+  {
+    "id": 586,
+    "name": "Mendy",
+    "position": "Defender",
+    "team": "HUL",
+    "price": 4.0,
+    "xP": 0.66
+  },
+  {
+    "id": 589,
+    "name": "Gourna-Douath",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 617,
+    "name": "Cho",
+    "position": "Midfielder",
+    "team": "HUL",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 259,
+    "name": "Diop",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.16
+  },
+  {
+    "id": 267,
+    "name": "Luki\u0107",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.22
+  },
+  {
+    "id": 300,
+    "name": "Walton",
+    "position": "Goalkeeper",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 301,
+    "name": "Palmer",
+    "position": "Goalkeeper",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 302,
+    "name": "Button",
+    "position": "Goalkeeper",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 303,
+    "name": "Kipr\u00e9",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 304,
+    "name": "O'Shea",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.22
+  },
+  {
+    "id": 305,
+    "name": "Davis",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.16
+  },
+  {
+    "id": 306,
+    "name": "Greaves",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.16
+  },
+  {
+    "id": 307,
+    "name": "Johnson",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 308,
+    "name": "Furlong",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 309,
+    "name": "N\u00fa\u00f1ez",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.2
+  },
+  {
+    "id": 310,
+    "name": "Matusiwa",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 311,
+    "name": "Burns",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 312,
+    "name": "Taylor",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 313,
+    "name": "Clarke",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.26
+  },
+  {
+    "id": 314,
+    "name": "Ogbene",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 315,
+    "name": "Fatawu",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.21
+  },
+  {
+    "id": 316,
+    "name": "Emersonn",
+    "position": "Forward",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.44
+  },
+  {
+    "id": 317,
+    "name": "Hirst",
+    "position": "Forward",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 318,
+    "name": "Philogene",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 319,
+    "name": "Szmodics",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 320,
+    "name": "Akpom",
+    "position": "Forward",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.08
+  },
+  {
+    "id": 321,
+    "name": "Walle Egeli",
+    "position": "Forward",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.07
+  },
+  {
+    "id": 322,
+    "name": "Al-Hamadi",
+    "position": "Forward",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 323,
+    "name": "McAteer",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.08
+  },
+  {
+    "id": 324,
+    "name": "Mehmeti",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 554,
+    "name": "Van Oevelen",
+    "position": "Goalkeeper",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 562,
+    "name": "Maeda",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.23
+  },
+  {
+    "id": 564,
+    "name": "Scherpen",
+    "position": "Goalkeeper",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.16
+  },
+  {
+    "id": 571,
+    "name": "Florentino",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 591,
+    "name": "Enciso",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.5,
+    "xP": 0.29
+  },
+  {
+    "id": 592,
+    "name": "Ouattara",
+    "position": "Defender",
+    "team": "IPS",
+    "price": 4.0,
+    "xP": 0.07
+  },
+  {
+    "id": 602,
+    "name": "Humphreys",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 619,
+    "name": "Palacios",
+    "position": "Midfielder",
+    "team": "IPS",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 260,
+    "name": "Wilson",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 6.5,
+    "xP": 0.26
+  },
+  {
+    "id": 326,
+    "name": "Perri",
+    "position": "Goalkeeper",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 327,
+    "name": "Bijol",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.44
+  },
+  {
+    "id": 329,
+    "name": "Rodon",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.35
+  },
+  {
+    "id": 330,
+    "name": "Bogle",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.34
+  },
+  {
+    "id": 331,
+    "name": "Gudmundsson",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 332,
+    "name": "Justin",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.43
+  },
+  {
+    "id": 333,
+    "name": "Bornauw",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 334,
+    "name": "Muharemovi\u0107",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.35
+  },
+  {
+    "id": 335,
+    "name": "Stach",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 6.0,
+    "xP": 0.51
+  },
+  {
+    "id": 336,
+    "name": "Okafor",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 6.0,
+    "xP": 0.26
+  },
+  {
+    "id": 337,
+    "name": "Aaronson",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 338,
+    "name": "Ampadu",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.5,
+    "xP": 0.33
+  },
+  {
+    "id": 339,
+    "name": "Longstaff",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.17
+  },
+  {
+    "id": 341,
+    "name": "Gnonto",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 342,
+    "name": "Harrison",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 343,
+    "name": "James",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 344,
+    "name": "Gruev",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 345,
+    "name": "Tanaka",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 346,
+    "name": "Calvert-Lewin",
+    "position": "Forward",
+    "team": "LEE",
+    "price": 6.0,
+    "xP": 0.25
+  },
+  {
+    "id": 347,
+    "name": "Nmecha",
+    "position": "Forward",
+    "team": "LEE",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 348,
+    "name": "Piroe",
+    "position": "Forward",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 349,
+    "name": "Mateo Joseph",
+    "position": "Forward",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 385,
+    "name": "Trafford",
+    "position": "Goalkeeper",
+    "team": "LEE",
+    "price": 5.0,
+    "xP": 0.41
+  },
+  {
+    "id": 598,
+    "name": "Elvedi",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 603,
+    "name": "Lienou",
+    "position": "Defender",
+    "team": "LEE",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 604,
+    "name": "Cresswell",
+    "position": "Midfielder",
+    "team": "LEE",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 350,
+    "name": "A.Becker",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.26
+  },
+  {
+    "id": 351,
+    "name": "Mamardashvili",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 352,
+    "name": "Woodman",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 353,
+    "name": "Pecsi",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 354,
+    "name": "Jaros",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 355,
+    "name": "Davies",
+    "position": "Goalkeeper",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 356,
+    "name": "Virgil",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 6.5,
+    "xP": 0.29
+  },
+  {
+    "id": 357,
+    "name": "Frimpong",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.23
+  },
+  {
+    "id": 358,
+    "name": "Kerkez",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.22
+  },
+  {
+    "id": 359,
+    "name": "Gomez",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 360,
+    "name": "Bradley",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 361,
+    "name": "Lucky",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 362,
+    "name": "Jacquet",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.22
+  },
+  {
+    "id": 363,
+    "name": "Leoni",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 364,
+    "name": "Tsimikas",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 365,
+    "name": "Ramsay",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 366,
+    "name": "Wirtz",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 7.5,
+    "xP": 0.29
+  },
+  {
+    "id": 367,
+    "name": "Gakpo",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 7.0,
+    "xP": 0.52
+  },
+  {
+    "id": 368,
+    "name": "Szoboszlai",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 7.0,
+    "xP": 0.52
+  },
+  {
+    "id": 369,
+    "name": "Ngumoha",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 6.0,
+    "xP": 0.25
+  },
+  {
+    "id": 370,
+    "name": "Chiesa",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 371,
+    "name": "Gravenberch",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 6.0,
+    "xP": 0.33
+  },
+  {
+    "id": 372,
+    "name": "Mac Allister",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.19
+  },
+  {
+    "id": 373,
+    "name": "C.Jones",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 374,
+    "name": "Endo",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 375,
+    "name": "Nyoni",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 376,
+    "name": "Bajcetic",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 377,
+    "name": "Munoz",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 6.5,
+    "xP": 0.31
+  },
+  {
+    "id": 378,
+    "name": "McConnell",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 379,
+    "name": "Isak",
+    "position": "Forward",
+    "team": "LIV",
+    "price": 9.0,
+    "xP": 0.39
+  },
+  {
+    "id": 380,
+    "name": "Ekitik\u00e9",
+    "position": "Forward",
+    "team": "LIV",
+    "price": 7.5,
+    "xP": 0.14
+  },
+  {
+    "id": 381,
+    "name": "Koumas",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.0,
+    "xP": 0.2
+  },
+  {
+    "id": 382,
+    "name": "Danns",
+    "position": "Forward",
+    "team": "LIV",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 383,
+    "name": "Elliott",
+    "position": "Midfielder",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 579,
+    "name": "Araujo",
+    "position": "Defender",
+    "team": "LIV",
+    "price": 5.5,
+    "xP": 0.2
+  },
+  {
+    "id": 238,
+    "name": "Grealish",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 6.5,
+    "xP": 0.17
+  },
+  {
+    "id": 384,
+    "name": "Donnarumma",
+    "position": "Goalkeeper",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.36
+  },
+  {
+    "id": 386,
+    "name": "Bettinelli",
+    "position": "Goalkeeper",
+    "team": "MCI",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 387,
+    "name": "O'Reilly",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 6.5,
+    "xP": 0.35
+  },
+  {
+    "id": 388,
+    "name": "Gu\u00e9hi",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 6.0,
+    "xP": 0.58
+  },
+  {
+    "id": 389,
+    "name": "Matheus N.",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 6.0,
+    "xP": 0.2
+  },
+  {
+    "id": 390,
+    "name": "R\u00faben",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.38
+  },
+  {
+    "id": 391,
+    "name": "Gvardiol",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.49
+  },
+  {
+    "id": 392,
+    "name": "A\u00eft-Nouri",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 5.4,
+    "xP": 0.14
+  },
+  {
+    "id": 393,
+    "name": "Khusanov",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.33
+  },
+  {
+    "id": 394,
+    "name": "Alleyne",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 395,
+    "name": "Lewis",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 4.5,
+    "xP": 0.25
+  },
+  {
+    "id": 396,
+    "name": "Vitor Reis",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 397,
+    "name": "Semenyo",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 8.5,
+    "xP": 0.38
+  },
+  {
+    "id": 398,
+    "name": "Foden",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 7.0,
+    "xP": 0.42
+  },
+  {
+    "id": 399,
+    "name": "Cherki",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 7.6,
+    "xP": 0.54
+  },
+  {
+    "id": 400,
+    "name": "Doku",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 7.4,
+    "xP": 0.14
+  },
+  {
+    "id": 402,
+    "name": "Rodrigo",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 6.5,
+    "xP": 0.14
+  },
+  {
+    "id": 404,
+    "name": "Reijnders",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 6.0,
+    "xP": 0.14
+  },
+  {
+    "id": 406,
+    "name": "Kova\u010di\u0107",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.2
+  },
+  {
+    "id": 407,
+    "name": "Echeverri",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 408,
+    "name": "Phillips",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 409,
+    "name": "Mukasa",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 410,
+    "name": "Monga",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 411,
+    "name": "Haaland",
+    "position": "Forward",
+    "team": "MCI",
+    "price": 15.5,
+    "xP": 0.42
+  },
+  {
+    "id": 481,
+    "name": "Anderson",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 6.4,
+    "xP": 0.35
+  },
+  {
+    "id": 587,
+    "name": "Rulli",
+    "position": "Goalkeeper",
+    "team": "MCI",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 616,
+    "name": "Bouaddi",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 5.5,
+    "xP": 0.31
+  },
+  {
+    "id": 621,
+    "name": "McAidoo",
+    "position": "Midfielder",
+    "team": "MCI",
+    "price": 4.5,
+    "xP": 0.29
+  },
+  {
+    "id": 622,
+    "name": "Braithwaite",
+    "position": "Defender",
+    "team": "MCI",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 43,
+    "name": "Tielemans",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 6.0,
+    "xP": 0.36
+  },
+  {
+    "id": 131,
+    "name": "Baleba",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 162,
+    "name": "Andrey Santos",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.38
+  },
+  {
+    "id": 325,
+    "name": "Darlow",
+    "position": "Goalkeeper",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 412,
+    "name": "Lammens",
+    "position": "Goalkeeper",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.34
+  },
+  {
+    "id": 413,
+    "name": "Bayindir",
+    "position": "Goalkeeper",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 414,
+    "name": "Heaton",
+    "position": "Goalkeeper",
+    "team": "MUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 415,
+    "name": "Dorgu",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.9,
+    "xP": 0.4
+  },
+  {
+    "id": 416,
+    "name": "De Ligt",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 417,
+    "name": "Dalot",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 418,
+    "name": "Maguire",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.39
+  },
+  {
+    "id": 419,
+    "name": "Martinez",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 420,
+    "name": "Yoro",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 421,
+    "name": "Heaven",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.36
+  },
+  {
+    "id": 422,
+    "name": "Mazraoui",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.37
+  },
+  {
+    "id": 423,
+    "name": "Shaw",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.37
+  },
+  {
+    "id": 424,
+    "name": "Amass",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 425,
+    "name": "Fredricson",
+    "position": "Defender",
+    "team": "MUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 426,
+    "name": "B.Fernandes",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 12.0,
+    "xP": 0.4
+  },
+  {
+    "id": 427,
+    "name": "Mbeumo",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 8.0,
+    "xP": 0.45
+  },
+  {
+    "id": 428,
+    "name": "Cunha",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 8.0,
+    "xP": 0.41
+  },
+  {
+    "id": 429,
+    "name": "Rashford",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 7.0,
+    "xP": 0.33
+  },
+  {
+    "id": 430,
+    "name": "Mount",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 431,
+    "name": "Amad",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.9,
+    "xP": 0.24
+  },
+  {
+    "id": 432,
+    "name": "Mainoo",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.5,
+    "xP": 0.32
+  },
+  {
+    "id": 433,
+    "name": "Ugarte",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 434,
+    "name": "J.Fletcher",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 435,
+    "name": "Lacey",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 436,
+    "name": "Collyer",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 437,
+    "name": "Bendito Mantato",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 438,
+    "name": "Fletcher",
+    "position": "Midfielder",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 439,
+    "name": "\u0160e\u0161ko",
+    "position": "Forward",
+    "team": "MUN",
+    "price": 7.0,
+    "xP": 0.3
+  },
+  {
+    "id": 440,
+    "name": "Zirkzee",
+    "position": "Forward",
+    "team": "MUN",
+    "price": 5.4,
+    "xP": 0.24
+  },
+  {
+    "id": 441,
+    "name": "Obi",
+    "position": "Forward",
+    "team": "MUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 405,
+    "name": "N.Gonzalez",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 442,
+    "name": "Pope",
+    "position": "Goalkeeper",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 443,
+    "name": "Gillespie",
+    "position": "Goalkeeper",
+    "team": "NEW",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 444,
+    "name": "Jaouen",
+    "position": "Goalkeeper",
+    "team": "NEW",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 445,
+    "name": "Thiaw",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.28
+  },
+  {
+    "id": 446,
+    "name": "Sch\u00e4r",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 447,
+    "name": "Botman",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.28
+  },
+  {
+    "id": 448,
+    "name": "Burn",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 449,
+    "name": "Hall",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.32
+  },
+  {
+    "id": 450,
+    "name": "Livramento",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.14
+  },
+  {
+    "id": 451,
+    "name": "A.Murphy",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 453,
+    "name": "Barnes",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.27
+  },
+  {
+    "id": 454,
+    "name": "Elanga",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.43
+  },
+  {
+    "id": 456,
+    "name": "J.Ramsey",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.19
+  },
+  {
+    "id": 457,
+    "name": "J.Murphy",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.15
+  },
+  {
+    "id": 458,
+    "name": "Joelinton",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.5,
+    "xP": 0.14
+  },
+  {
+    "id": 459,
+    "name": "L.Miley",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 460,
+    "name": "Willock",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.38
+  },
+  {
+    "id": 461,
+    "name": "Tour\u00e9",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.14
+  },
+  {
+    "id": 462,
+    "name": "Steur",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.21
+  },
+  {
+    "id": 463,
+    "name": "Woltemade",
+    "position": "Forward",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.14
+  },
+  {
+    "id": 464,
+    "name": "Wissa",
+    "position": "Forward",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.43
+  },
+  {
+    "id": 465,
+    "name": "Osula",
+    "position": "Forward",
+    "team": "NEW",
+    "price": 6.0,
+    "xP": 0.31
+  },
+  {
+    "id": 466,
+    "name": "Neave",
+    "position": "Forward",
+    "team": "NEW",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 559,
+    "name": "Bamba",
+    "position": "Midfielder",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.17
+  },
+  {
+    "id": 567,
+    "name": "Horn\u00ed\u010dek",
+    "position": "Goalkeeper",
+    "team": "NEW",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 593,
+    "name": "Dedi\u0107",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 609,
+    "name": "Shahar",
+    "position": "Defender",
+    "team": "NEW",
+    "price": 4.0,
+    "xP": 0.14
+  },
+  {
+    "id": 167,
+    "name": "Delap",
+    "position": "Forward",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 467,
+    "name": "Sels",
+    "position": "Goalkeeper",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 468,
+    "name": "John",
+    "position": "Goalkeeper",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 469,
+    "name": "N.Williams",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 470,
+    "name": "Morato",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 471,
+    "name": "Milenkovi\u0107",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.18
+  },
+  {
+    "id": 472,
+    "name": "Murillo",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 473,
+    "name": "Aina",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 474,
+    "name": "Jair Cunha",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.14
+  },
+  {
+    "id": 475,
+    "name": "Savona",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 476,
+    "name": "O.Richards",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 477,
+    "name": "Abbott",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 478,
+    "name": "Netz",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.08
+  },
+  {
+    "id": 479,
+    "name": "Bindon",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 4.0,
+    "xP": 0.04
+  },
+  {
+    "id": 480,
+    "name": "Gibbs-White",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 7.9,
+    "xP": 0.18
+  },
+  {
+    "id": 482,
+    "name": "Hudson-Odoi",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.9,
+    "xP": 0.04
+  },
+  {
+    "id": 483,
+    "name": "Ndoye",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.16
+  },
+  {
+    "id": 484,
+    "name": "Hutchinson",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 485,
+    "name": "Bakwa",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 486,
+    "name": "McAtee",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.19
+  },
+  {
+    "id": 487,
+    "name": "Dominguez",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.04
+  },
+  {
+    "id": 488,
+    "name": "I.Sangar\u00e9",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.16
+  },
+  {
+    "id": 489,
+    "name": "Yates",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 490,
+    "name": "Wood",
+    "position": "Forward",
+    "team": "NFO",
+    "price": 6.0,
+    "xP": 0.14
+  },
+  {
+    "id": 491,
+    "name": "Igor Jesus",
+    "position": "Forward",
+    "team": "NFO",
+    "price": 6.0,
+    "xP": 0.19
+  },
+  {
+    "id": 493,
+    "name": "Kalimuendo",
+    "position": "Forward",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.06
+  },
+  {
+    "id": 558,
+    "name": "Schlager",
+    "position": "Midfielder",
+    "team": "NFO",
+    "price": 5.0,
+    "xP": 0.08
+  },
+  {
+    "id": 581,
+    "name": "Diomande",
+    "position": "Defender",
+    "team": "NFO",
+    "price": 5.5,
+    "xP": 0.04
+  },
+  {
+    "id": 590,
+    "name": "Benda",
+    "position": "Goalkeeper",
+    "team": "NFO",
+    "price": 4.5,
+    "xP": 0.04
+  },
+  {
+    "id": 112,
+    "name": "Van Hecke",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.34
+  },
+  {
+    "id": 401,
+    "name": "Marmoush",
+    "position": "Forward",
+    "team": "TOT",
+    "price": 7.0,
+    "xP": 0.24
+  },
+  {
+    "id": 403,
+    "name": "S\u00e1vio",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.5,
+    "xP": 0.24
+  },
+  {
+    "id": 455,
+    "name": "Tonali",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.37
+  },
+  {
+    "id": 494,
+    "name": "Vicario",
+    "position": "Goalkeeper",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 495,
+    "name": "Austin",
+    "position": "Goalkeeper",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 496,
+    "name": "Kinsky",
+    "position": "Goalkeeper",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.36
+  },
+  {
+    "id": 497,
+    "name": "Dubravka",
+    "position": "Goalkeeper",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 498,
+    "name": "Senesi",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.38
+  },
+  {
+    "id": 499,
+    "name": "Pedro Porro",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 500,
+    "name": "Romero",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 501,
+    "name": "Danso",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 502,
+    "name": "Robertson",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.39
+  },
+  {
+    "id": 503,
+    "name": "Van de Ven",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 505,
+    "name": "Spence",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 506,
+    "name": "Udogie",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.32
+  },
+  {
+    "id": 507,
+    "name": "Phillips",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 508,
+    "name": "Davies",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 509,
+    "name": "Byfield",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 510,
+    "name": "Rowswell",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 511,
+    "name": "Souza",
+    "position": "Defender",
+    "team": "TOT",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 512,
+    "name": "Kudus",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.5,
+    "xP": 0.24
+  },
+  {
+    "id": 513,
+    "name": "Xavi",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.24
+  },
+  {
+    "id": 514,
+    "name": "Tel",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.37
+  },
+  {
+    "id": 515,
+    "name": "Maddison",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.4,
+    "xP": 0.29
+  },
+  {
+    "id": 516,
+    "name": "Bentancur",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 517,
+    "name": "Odobert",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 518,
+    "name": "P.M.Sarr",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 4.9,
+    "xP": 0.24
+  },
+  {
+    "id": 519,
+    "name": "Gallagher",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 520,
+    "name": "Bergvall",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 521,
+    "name": "Kulusevski",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.5,
+    "xP": 0.24
+  },
+  {
+    "id": 522,
+    "name": "Gray",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.36
+  },
+  {
+    "id": 523,
+    "name": "Moore",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 5.0,
+    "xP": 0.41
+  },
+  {
+    "id": 524,
+    "name": "Olusesi",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 525,
+    "name": "Fernandes",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.32
+  },
+  {
+    "id": 526,
+    "name": "Solanke",
+    "position": "Forward",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.32
+  },
+  {
+    "id": 527,
+    "name": "Richarlison",
+    "position": "Forward",
+    "team": "TOT",
+    "price": 6.0,
+    "xP": 0.34
+  },
+  {
+    "id": 528,
+    "name": "Scarlett",
+    "position": "Forward",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 601,
+    "name": "Williams-Barnett",
+    "position": "Midfielder",
+    "team": "TOT",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 529,
+    "name": "Roefs",
+    "position": "Goalkeeper",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.34
+  },
+  {
+    "id": 530,
+    "name": "Patterson",
+    "position": "Goalkeeper",
+    "team": "SUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 531,
+    "name": "Ellborg",
+    "position": "Goalkeeper",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 532,
+    "name": "Ballard",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.32
+  },
+  {
+    "id": 533,
+    "name": "Mukiele",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 5.5,
+    "xP": 0.24
+  },
+  {
+    "id": 534,
+    "name": "Hume",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.39
+  },
+  {
+    "id": 535,
+    "name": "Alderete",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.29
+  },
+  {
+    "id": 536,
+    "name": "Reinildo",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.37
+  },
+  {
+    "id": 537,
+    "name": "Seelt",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 538,
+    "name": "Hjelde",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 539,
+    "name": "O'Nien",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.0,
+    "xP": 0.32
+  },
+  {
+    "id": 540,
+    "name": "Masuaku",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.0,
+    "xP": 0.24
+  },
+  {
+    "id": 541,
+    "name": "Meunier",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.36
+  },
+  {
+    "id": 542,
+    "name": "E.Le F\u00e9e",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 6.0,
+    "xP": 0.35
+  },
+  {
+    "id": 543,
+    "name": "Diarra",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.5,
+    "xP": 0.3
+  },
+  {
+    "id": 544,
+    "name": "Xhaka",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.5,
+    "xP": 0.52
+  },
+  {
+    "id": 545,
+    "name": "Sadiki",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.37
+  },
+  {
+    "id": 546,
+    "name": "Adingra",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 4.9,
+    "xP": 0.24
+  },
+  {
+    "id": 547,
+    "name": "Mundle",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 548,
+    "name": "Rigg",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.27
+  },
+  {
+    "id": 549,
+    "name": "Talbi",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.5,
+    "xP": 0.29
+  },
+  {
+    "id": 550,
+    "name": "Jocelin.T",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.24
+  },
+  {
+    "id": 551,
+    "name": "Angulo",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 5.0,
+    "xP": 0.43
+  },
+  {
+    "id": 552,
+    "name": "Brobbey",
+    "position": "Forward",
+    "team": "SUN",
+    "price": 6.0,
+    "xP": 0.39
+  },
+  {
+    "id": 553,
+    "name": "Isidor",
+    "position": "Forward",
+    "team": "SUN",
+    "price": 5.5,
+    "xP": 0.28
+  },
+  {
+    "id": 612,
+    "name": "Methalie",
+    "position": "Defender",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.24
+  },
+  {
+    "id": 613,
+    "name": "Ahoka",
+    "position": "Midfielder",
+    "team": "SUN",
+    "price": 4.5,
+    "xP": 0.24
+  }
+]

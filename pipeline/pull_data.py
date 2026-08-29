@@ -49,6 +49,14 @@ def save_raw(data, filename: str) -> Path:
     return filepath
 
 
+def fetch_actual_points(target_gw):
+    """Get the real points every player scored in one finished gameweek, as a {player_id: points} lookup."""
+    url = f"https://fantasy.premierleague.com/api/event/{target_gw}/live/"
+    data = fetch_json(url)
+    save_raw(data, f"gw{target_gw}_live.json")
+    return {e['id']: e['stats']['total_points'] for e in data['elements']}
+
+
 def main():
     pulled_at = datetime.now(timezone.utc).isoformat()
     print(f"Pulling FPL data at {pulled_at}...")

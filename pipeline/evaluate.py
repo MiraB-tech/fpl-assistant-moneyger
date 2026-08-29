@@ -8,7 +8,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from pull_data import fetch_json, save_raw
+from pull_data import fetch_actual_points
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 LOG_PATH = DATA_DIR / "model_performance_log.csv"
@@ -16,12 +16,6 @@ LOG_PATH = DATA_DIR / "model_performance_log.csv"
 def load_predictions(target_gw):
     with open(DATA_DIR / f"gw{target_gw}_predictions.json", encoding="utf-8") as f:
         return json.load(f)
-
-def fetch_actual_points(target_gw):
-    url = f"https://fantasy.premierleague.com/api/event/{target_gw}/live/"
-    data = fetch_json(url)
-    save_raw(data, f"gw{target_gw}_live.json")
-    return {e['id']: e['stats']['total_points'] for e in data['elements']}
 
 def compare(predictions, actual_points):
     results = []
