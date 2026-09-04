@@ -1,0 +1,85 @@
+.app {
+  text-align: left;
+  padding: 0 24px 48px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.tabs button {
+  font: inherit;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--text-h);
+}
+
+.squad-summary {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.player-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.player-table th,
+.player-table td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.player-table th {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.badge.captain {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.badge.vice-captain {
+  background: var(--accent-bg);
+  color: var(--text-h);
+  border: 1px solid var(--accent-border);
+}
+
+.positive {
+  color: #1a9c4b;
+}
+
+.negative {
+  color: #d0392b;
+}
+
+.error {
+  padding: 24px;
+  color: #d0392b;
+}

@@ -57,6 +57,14 @@ def fetch_actual_points(target_gw):
     return {e['id']: e['stats']['total_points'] for e in data['elements']}
 
 
+def fetch_squad(team_id, target_gw):
+    """Get one FPL team's picks for a specific gameweek: which 15 players, captain/vice-captain, bench order, and bank/team value at that point."""
+    url = f"https://fantasy.premierleague.com/api/entry/{team_id}/event/{target_gw}/picks/"
+    data = fetch_json(url)
+    save_raw(data, f"squad_gw{target_gw}.json")
+    return data
+
+
 def main():
     pulled_at = datetime.now(timezone.utc).isoformat()
     print(f"Pulling FPL data at {pulled_at}...")
