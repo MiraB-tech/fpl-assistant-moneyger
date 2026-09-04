@@ -1,13 +1,15 @@
 """
 run_gameweek.py — the one script you run at the end of each gameweek.
 
-It does two jobs, one after the other:
+It does three jobs, one after the other:
   1. Evaluates the gameweek that just finished (compares what we
      predicted against what actually happened) — but only if we
      actually saved a prediction for it. If not, it skips this step
      instead of crashing.
   2. Pulls fresh data from the FPL API and generates predictions for
      the *next* gameweek.
+  3. Refreshes data/my_squad.json with your real current squad for
+     that next gameweek, joined with the fresh predictions.
 
 Usage — pass in the number of the gameweek you want predictions for:
     ./.venv/Scripts/python.exe run_gameweek.py <next_gw_number>
@@ -27,6 +29,7 @@ from pull_data import main as pull_raw_data
 from build_features import build_features
 from predict import DATA_DIR, calculate_xp, save_predictions
 from evaluate import load_predictions, fetch_actual_points, compare, save_results, log_performance
+from build_squad import build_squad, save_squad
 
 
 def evaluate_previous_gameweek(gw):
@@ -42,6 +45,8 @@ def evaluate_previous_gameweek(gw):
         nothing earlier to evaluate).
       - We never actually ran predict.py for that gameweek, so its
         predictions file doesn't exist on disk.
+      - We've already evaluated it on a previous run — re-running this
+        script for the same next gameweek shouldn't log a duplicate row.
     """
     if gw < 1:
         print(f"No gameweek {gw} to evaluate — skipping.")
@@ -50,6 +55,11 @@ def evaluate_previous_gameweek(gw):
     predictions_path = DATA_DIR / f"gw{gw}_predictions.json"
     if not predictions_path.exists():
         print(f"No saved predictions found for GW{gw} — skipping evaluation.")
+        return
+
+    results_path = DATA_DIR / f"gw{gw}_results.json"
+    if results_path.exists():
+        print(f"GW{gw} already evaluated — skipping.")
         return
 
     # From here it's the exact same four steps evaluate.py's own
@@ -80,6 +90,17 @@ def predict_next_gameweek(gw):
     print(f"Saved predictions for {len(predictions)} players for GW{gw}.")
 
 
+def update_squad(gw):
+    """
+    Refresh data/my_squad.json with your real, current squad for `gw`,
+    joined with the predictions we just built above (so it has each
+    owned player's price, xP, captain/vice status, and bench order).
+    """
+    squad = build_squad(gw)
+    save_squad(squad)
+    print(f"Saved squad for GW{gw}: {len(squad['picks'])} players.")
+
+
 if __name__ == "__main__":
     # sys.argv is the list of words you typed on the command line.
     # sys.argv[0] is always the script's own name; sys.argv[1] is the
@@ -90,3 +111,4 @@ if __name__ == "__main__":
 
     evaluate_previous_gameweek(next_gw - 1)
     predict_next_gameweek(next_gw)
+    update_squad(next_gw)
