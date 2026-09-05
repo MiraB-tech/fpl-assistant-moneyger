@@ -9,6 +9,7 @@ import os
 import secrets
 from datetime import datetime, timedelta, timezone
 from functools import wraps
+from typing import Optional
 
 import bcrypt
 from flask import g, jsonify, request
@@ -64,7 +65,7 @@ def delete_session(conn, raw_token: str) -> None:
     conn.commit()
 
 
-def get_user_from_token(conn, raw_token: str) -> dict | None:
+def get_user_from_token(conn, raw_token: str) -> Optional[dict]:
     """Look up which user (if any) a raw session token cookie belongs to."""
     with conn.cursor() as cur:
         cur.execute(
