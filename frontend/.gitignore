@@ -12,8 +12,14 @@ dist
 dist-ssr
 *.local
 
-# Copied here by copy-data.js before each dev/build — data/ is the real source.
-public/data
+# Secrets — Neon connection string, etc. Never commit this.
+.env
+.env.*
+
+# Python backend (frontend/api/) — its own venv, never installed globally.
+api/.venv
+__pycache__
+*.pyc
 
 # Editor directories and files
 .vscode/*
