@@ -12,8 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Copied here by copy-data.js before each dev/build — data/ is the real source.
-public/data
+# Secrets
+.env
+.env.*
 
 # Editor directories and files
 .vscode/*

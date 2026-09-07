@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: assistant_moneyger
+      POSTGRES_USER: moneyger_dev
+      POSTGRES_PASSWORD: moneyger_dev_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - moneyger_pgdata:/var/lib/postgresql/data
+
+volumes:
+  moneyger_pgdata:

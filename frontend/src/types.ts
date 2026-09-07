@@ -1,5 +1,10 @@
-// Shared shapes for the data coming out of the Python pipeline
-// (data/gw{N}_predictions.json and data/my_squad.json).
+// Shared shapes for the data coming out of the backend API (frontend/api/).
+
+export interface User {
+  id: number
+  email: string
+  fpl_team_id: number | null
+}
 
 export type Position = "Goalkeeper" | "Defender" | "Midfielder" | "Forward"
 
