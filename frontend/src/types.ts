@@ -1,4 +1,4 @@
-// Shared shapes for the data coming out of the backend API (frontend/api/).
+// Shared shapes for the data coming out of the backend API (backend/).
 
 export interface User {
   id: number
@@ -18,6 +18,7 @@ export interface Player {
 }
 
 export interface SquadPick extends Player {
+  current_points: number
   squad_position: number
   is_captain: boolean
   is_vice_captain: boolean

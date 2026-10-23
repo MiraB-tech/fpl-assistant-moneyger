@@ -45,6 +45,11 @@ public class ElementDto
 
     [JsonPropertyName("minutes")]
     public int Minutes { get; set; }
+
+    // FPL's own injury/rotation/suspension indicator: 100 = fully expected
+    // to play, 0 = not expected to play at all, null = no doubt (fit).
+    [JsonPropertyName("chance_of_playing_next_round")]
+    public int? ChanceOfPlayingNextRound { get; set; }
 }
 
 public class TeamDto
@@ -75,4 +80,7 @@ public class EventDto
 
     [JsonPropertyName("is_next")]
     public bool IsNext { get; set; }
+
+    [JsonPropertyName("finished")]
+    public bool Finished { get; set; }
 }

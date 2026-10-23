@@ -122,13 +122,16 @@ namespace AssistantMoneyger.Api.Migrations
                     b.Property<int>("PlayerId")
                         .HasColumnType("integer");
 
+                    b.Property<double>("CleanSheetProbability")
+                        .HasColumnType("double precision");
+
                     b.Property<DateTimeOffset>("ComputedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<double>("FixtureDifficulty")
+                    b.Property<double>("ExpectedAssists")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("MinutesReliability")
+                    b.Property<double>("ExpectedGoals")
                         .HasColumnType("double precision");
 
                     b.Property<string>("Name")
@@ -142,15 +145,12 @@ namespace AssistantMoneyger.Api.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
-                    b.Property<double>("RecentForm")
+                    b.Property<double>("StartProbability")
                         .HasColumnType("double precision");
 
                     b.Property<string>("Team")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<double>("XaXgPer90")
-                        .HasColumnType("double precision");
 
                     b.Property<double>("Xp")
                         .HasColumnType("double precision");

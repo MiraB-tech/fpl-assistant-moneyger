@@ -1,4 +1,4 @@
-// Wrappers around fetch() for the backend API (frontend/api/). Every call
+// Wrappers around fetch() for the backend API (backend/). Every call
 // sends credentials: "include" so the httpOnly session cookie goes along
 // with same-origin requests automatically.
 
@@ -63,8 +63,13 @@ export function loadAllPlayers(gameweek: number): Promise<Player[]> {
   return apiFetch<Player[]>(`/api/predictions?gw=${gameweek}`)
 }
 
-export function loadSquad(gameweek: number): Promise<Squad> {
-  return apiFetch<Squad>(`/api/squad?gw=${gameweek}`)
+// `picksGw` lets you ask for "picks from gw3, predictions from gw4" —
+// needed because FPL only has a picks record once a gameweek's deadline
+// has passed, so planning against a future gameweek must reuse the most
+// recent real picks rather than picks that don't exist yet.
+export function loadSquad(gameweek: number, picksGw?: number): Promise<Squad> {
+  const picksParam = picksGw !== undefined ? `&picksGw=${picksGw}` : ""
+  return apiFetch<Squad>(`/api/squad?gw=${gameweek}${picksParam}`)
 }
 
 export interface AdvanceResult {
