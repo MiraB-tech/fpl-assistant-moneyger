@@ -75,6 +75,17 @@ public static class GetSquad
             });
         }
 
+        // Player details (name, team, position, price) come from FPL's own
+        // player list, so the squad always shows up — even for a gameweek
+        // nobody generated predictions for in time (e.g. one that kicked
+        // off while no one had the app open). Predictions only add the xP
+        // number on top, and it's 0 when there isn't one.
+        var bootstrap = await fpl.GetBootstrapStaticAsync()
+            ?? throw new InvalidOperationException("FPL bootstrap-static returned nothing");
+        var playersById = bootstrap.Elements.ToDictionary(e => e.Id);
+        var positionNames = bootstrap.ElementTypes.ToDictionary(et => et.Id, et => et.SingularName);
+        var teamNames = bootstrap.Teams.ToDictionary(t => t.Id, t => t.ShortName);
+
         var predictionsByPlayerId = await db.Predictions
             .Where(p => p.Gw == gw)
             .ToDictionaryAsync(p => p.PlayerId);
@@ -96,17 +107,18 @@ public static class GetSquad
         var picks = new List<SquadPickResponse>();
         foreach (var pick in picksDto.Picks)
         {
-            // Shouldn't normally happen — every owned player should be in
-            // that gameweek's predictions — but skip rather than crash if
-            // the data ever gets out of sync.
-            if (!predictionsByPlayerId.TryGetValue(pick.Element, out var prediction))
+            // Shouldn't normally happen — every owned player is in FPL's
+            // own player list — but skip rather than crash if it ever does.
+            if (!playersById.TryGetValue(pick.Element, out var player))
             {
                 continue;
             }
 
+            var xp = predictionsByPlayerId.TryGetValue(pick.Element, out var prediction) ? prediction.Xp : 0;
+
             picks.Add(new SquadPickResponse(
-                prediction.PlayerId, prediction.Name, prediction.Position, prediction.Team,
-                prediction.Price, prediction.Xp, currentPoints.GetValueOrDefault(pick.Element, 0),
+                player.Id, player.WebName, positionNames[player.ElementType], teamNames[player.Team],
+                player.NowCost / 10m, xp, currentPoints.GetValueOrDefault(pick.Element, 0),
                 pick.Position, pick.IsCaptain, pick.IsViceCaptain, pick.Multiplier));
         }
 

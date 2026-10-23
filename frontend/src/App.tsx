@@ -19,6 +19,15 @@ import { TeamSetupView } from "./components/TeamSetupView"
 type Tab = "squad" | "best-xi" | "transfers"
 type AuthView = "login" | "register"
 
+const TABS: Tab[] = ["squad", "best-xi", "transfers"]
+
+// The open tab lives in the address bar (e.g. ...#best-xi), so reloading
+// the page keeps you on the same tab instead of jumping back to Squad.
+function tabFromUrl(): Tab {
+  const hash = window.location.hash.slice(1)
+  return TABS.includes(hash as Tab) ? (hash as Tab) : "squad"
+}
+
 function App() {
   // undefined = still checking on load, null = not logged in, User = logged in
   const [user, setUser] = useState<User | null | undefined>(undefined)
@@ -35,7 +44,12 @@ function App() {
   const [nextAllPlayers, setNextAllPlayers] = useState<Player[] | null>(null)
 
   const [error, setError] = useState<string | null>(null)
-  const [tab, setTab] = useState<Tab>("squad")
+  const [tab, setTabState] = useState<Tab>(tabFromUrl)
+
+  function setTab(next: Tab) {
+    window.location.hash = next
+    setTabState(next)
+  }
   const [refreshing, setRefreshing] = useState(false)
 
   useEffect(() => {
@@ -48,6 +62,15 @@ function App() {
   async function loadGameweekData() {
     const { current_gw, next_gw } = await getCurrentGameweek()
     setNextGw(next_gw)
+
+    // Make sure next gameweek's predictions exist before loading anything
+    // that depends on them — otherwise, after a gap where nobody opened
+    // the app, Best XI and Transfers come up empty until someone thinks
+    // to press "Refresh". Cheap to call every time: the backend only does
+    // the real work if its predictions are over 6 hours old.
+    if (next_gw !== null) {
+      await advanceGameweek(next_gw)
+    }
 
     await Promise.all([
       current_gw !== null ? loadSquad(current_gw).then(setCurrentSquad) : Promise.resolve(),
