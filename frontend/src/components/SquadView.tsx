@@ -16,7 +16,7 @@ export function SquadView({ squad }: Props) {
   const totalPoints = starters.reduce((sum, p) => sum + p.current_points * p.multiplier, 0)
 
   return (
-    <div>
+    <div className="view">
       <h2 className="gameweek-heading">Gameweek {squad.gameweek}</h2>
       <p className="squad-total">{totalPoints} pts</p>
       <p className="squad-summary">

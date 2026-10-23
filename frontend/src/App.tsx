@@ -1,31 +1,37 @@
 import { useEffect, useState } from "react"
 import "./App.css"
-import {
-  advanceGameweek,
-  getCurrentGameweek,
-  getCurrentUser,
-  loadAllPlayers,
-  loadSquad,
-  logout,
-} from "./data"
+import { advanceGameweek, getCurrentGameweek, getCurrentUser, loadAllPlayers, loadSquad, logout } from "./data"
 import type { Player, Squad, User } from "./types"
 import { SquadView } from "./components/SquadView"
 import { BestXIView } from "./components/BestXIView"
 import { TransfersView } from "./components/TransfersView"
+import { BestGwXIView } from "./components/BestGwXIView"
 import { LoginView } from "./components/LoginView"
 import { RegisterView } from "./components/RegisterView"
 import { TeamSetupView } from "./components/TeamSetupView"
 
-type Tab = "squad" | "best-xi" | "transfers"
+type Tab = "squad" | "best-xi" | "transfers" | "best-gw-xi"
 type AuthView = "login" | "register"
 
-const TABS: Tab[] = ["squad", "best-xi", "transfers"]
+const TABS: Tab[] = ["squad", "best-xi", "transfers", "best-gw-xi"]
 
 // The open tab lives in the address bar (e.g. ...#best-xi), so reloading
 // the page keeps you on the same tab instead of jumping back to Squad.
 function tabFromUrl(): Tab {
   const hash = window.location.hash.slice(1)
   return TABS.includes(hash as Tab) ? (hash as Tab) : "squad"
+}
+
+// Logo mark + name, shown at the top of every screen
+function Brand() {
+  return (
+    <div className="brand">
+      <span className="brand-mark" aria-hidden="true">
+        AM
+      </span>
+      <h1>The Assistant Moneyger</h1>
+    </div>
+  )
 }
 
 function App() {
@@ -123,18 +129,23 @@ function App() {
   }
 
   if (user === undefined) {
-    return <p className="squad-summary">Loading...</p>
+    return <p className="loading">Loading...</p>
   }
 
   if (user === null) {
     return (
       <div className="app">
-        <h1>The Assistant Moneyger</h1>
-        {authView === "login" ? (
-          <LoginView onLoggedIn={setUser} onSwitchToRegister={() => setAuthView("register")} />
-        ) : (
-          <RegisterView onRegistered={setUser} onSwitchToLogin={() => setAuthView("login")} />
-        )}
+        <header className="topbar">
+          <Brand />
+        </header>
+        <main className="content auth-page">
+          <p className="tagline">Your FPL copilot — smarter line-ups, captains and transfers every gameweek.</p>
+          {authView === "login" ? (
+            <LoginView onLoggedIn={setUser} onSwitchToRegister={() => setAuthView("register")} />
+          ) : (
+            <RegisterView onRegistered={setUser} onSwitchToLogin={() => setAuthView("login")} />
+          )}
+        </main>
       </div>
     )
   }
@@ -142,8 +153,12 @@ function App() {
   if (!user.fpl_team_id) {
     return (
       <div className="app">
-        <h1>The Assistant Moneyger</h1>
-        <TeamSetupView onTeamSet={setUser} />
+        <header className="topbar">
+          <Brand />
+        </header>
+        <main className="content auth-page">
+          <TeamSetupView onTeamSet={setUser} />
+        </main>
       </div>
     )
   }
@@ -152,41 +167,49 @@ function App() {
 
   return (
     <div className="app">
-      <div className="header-row">
-        <h1>The Assistant Moneyger</h1>
-        <div>
-          <button onClick={handleRefresh} disabled={refreshing || nextGw === null}>
+      <header className="topbar">
+        <Brand />
+        <div className="topbar-actions">
+          <button className="button primary" onClick={handleRefresh} disabled={refreshing || nextGw === null}>
             {refreshing ? "Refreshing..." : "Refresh predictions"}
           </button>
-          <button className="link-button" onClick={handleLogout}>
+          <button className="button ghost" onClick={handleLogout}>
             Log out
           </button>
         </div>
-      </div>
+      </header>
 
-      {error && <p className="error">{error}</p>}
+      <main className="content">
+        {error && <p className="error">{error}</p>}
 
-      {!ready ? (
-        <p className="squad-summary">Loading...</p>
-      ) : (
-        <>
-          <nav className="tabs">
-            <button className={tab === "squad" ? "active" : ""} onClick={() => setTab("squad")}>
-              Squad
-            </button>
-            <button className={tab === "best-xi" ? "active" : ""} onClick={() => setTab("best-xi")}>
-              Best XI
-            </button>
-            <button className={tab === "transfers" ? "active" : ""} onClick={() => setTab("transfers")}>
-              Transfers
-            </button>
-          </nav>
+        {!ready ? (
+          <p className="loading">Loading your squad...</p>
+        ) : (
+          <>
+            <nav className="tabs">
+              <button className={tab === "squad" ? "active" : ""} onClick={() => setTab("squad")}>
+                Squad
+              </button>
+              <button className={tab === "best-xi" ? "active" : ""} onClick={() => setTab("best-xi")}>
+                Your Best XI
+              </button>
+              <button className={tab === "transfers" ? "active" : ""} onClick={() => setTab("transfers")}>
+                Transfers
+              </button>
+              {nextGw !== null && (
+                <button className={tab === "best-gw-xi" ? "active" : ""} onClick={() => setTab("best-gw-xi")}>
+                  Best GW{nextGw} XI
+                </button>
+              )}
+            </nav>
 
-          {tab === "squad" && <SquadView squad={currentSquad} />}
-          {tab === "best-xi" && nextGw !== null && <BestXIView squad={nextSquad} nextGw={nextGw} />}
-          {tab === "transfers" && <TransfersView squad={nextSquad} allPlayers={nextAllPlayers} />}
-        </>
-      )}
+            {tab === "squad" && <SquadView squad={currentSquad} />}
+            {tab === "best-xi" && nextGw !== null && <BestXIView squad={nextSquad} nextGw={nextGw} />}
+            {tab === "transfers" && <TransfersView squad={nextSquad} allPlayers={nextAllPlayers} />}
+            {tab === "best-gw-xi" && nextGw !== null && <BestGwXIView allPlayers={nextAllPlayers} nextGw={nextGw} />}
+          </>
+        )}
+      </main>
     </div>
   )
 }

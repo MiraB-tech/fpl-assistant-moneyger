@@ -14,7 +14,8 @@ export interface TransferSuggestion {
   out: SquadPick
   in: Player
   xpGain: number
-  costChange: number
+  // Money this transfer frees up (positive) or costs you (negative), in £m
+  valueToTeam: number
 }
 
 export function suggestTransfers(
@@ -45,7 +46,7 @@ export function suggestTransfers(
         out: owned,
         in: bestReplacement,
         xpGain: bestReplacement.xP - owned.xP,
-        costChange: bestReplacement.price - owned.price,
+        valueToTeam: owned.price - bestReplacement.price,
       })
     }
   }

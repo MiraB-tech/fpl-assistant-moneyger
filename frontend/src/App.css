@@ -1,49 +1,192 @@
+/* Layout and component styles. Colours all come from the tokens in
+   index.css, so this file works unchanged in light and dark mode.
+   Sizes use clamp(min, preferred, max) so things grow and shrink
+   smoothly with the screen instead of jumping at fixed breakpoints. */
+
+/* ---------- Page shell ---------- */
+
 .app {
-  text-align: left;
-  padding: 0 24px 48px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.header-row {
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 12px clamp(16px, 4vw, 40px);
+  background: var(--brand-grad);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  color: #fff;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #0b2a1b;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
-.header-row button {
-  font: inherit;
+.content {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 32px) 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading {
+  margin-top: 48px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.error {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--negative) 12%, transparent);
+  color: var(--negative);
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
   padding: 8px 16px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  color: var(--text);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
   cursor: pointer;
-  margin-left: 8px;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button.primary {
+  background: var(--gold);
+  color: #0b2a1b;
+}
+
+.button.primary:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.button.ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.button.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Login / register / team setup ---------- */
+
+.auth-page {
+  justify-content: flex-start;
+  padding-top: clamp(32px, 8vh, 80px);
+}
+
+.tagline {
+  max-width: 420px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--text);
+  font-size: 17px;
 }
 
 .auth-form {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 360px;
+  gap: 14px;
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.auth-form h2 {
+  text-align: center;
+}
+
+.auth-form p {
+  text-align: center;
 }
 
 .auth-form label {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   font-size: 14px;
-  color: var(--text);
+  font-weight: 600;
+  color: var(--text-h);
 }
 
 .auth-form input {
   font: inherit;
-  padding: 8px 10px;
+  font-weight: 400;
+  padding: 10px 12px;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
+  border-radius: 10px;
+  background: var(--surface-2);
   color: var(--text-h);
+}
+
+.auth-form input:focus {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 1px;
 }
 
 .password-field {
@@ -53,12 +196,12 @@
 
 .password-field input {
   flex: 1;
-  padding-right: 36px;
+  padding-right: 40px;
 }
 
 .password-toggle {
   position: absolute;
-  right: 4px;
+  right: 6px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -70,97 +213,135 @@
 }
 
 .auth-form button[type="submit"] {
-  font: inherit;
-  padding: 10px;
-  border: 1px solid var(--accent-border);
-  border-radius: 6px;
-  background: var(--accent-bg);
-  color: var(--text-h);
+  padding: 11px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
   cursor: pointer;
 }
 
-.link-button {
-  background: none;
-  border: none;
-  color: var(--accent);
-  cursor: pointer;
-  padding: 0;
-  font: inherit;
-  text-decoration: underline;
+.auth-form button[type="submit"]:disabled {
+  opacity: 0.6;
 }
+
+/* ---------- Tabs ---------- */
 
 .tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  max-width: 100%;
+  margin-bottom: clamp(20px, 3vw, 32px);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .tabs button {
-  font: inherit;
-  padding: 8px 16px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
+  padding: 8px clamp(12px, 2.4vw, 20px);
+  border: none;
+  border-radius: 999px;
+  background: transparent;
   color: var(--text);
+  font-weight: 600;
+  font-size: clamp(13px, 1.8vw, 15px);
   cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tabs button:hover:not(.active) {
+  background: var(--accent-bg);
+  color: var(--text-h);
 }
 
 .tabs button.active {
-  background: var(--accent-bg);
-  border-color: var(--accent-border);
-  color: var(--text-h);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* ---------- Shared view layout ---------- */
+
+.view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .gameweek-heading {
-  margin: 4px 0 4px;
-  font-size: 20px;
-  color: var(--text-h);
+  margin-bottom: 2px;
 }
 
 .squad-total {
-  margin: 0 0 12px;
-  font-size: 32px;
+  margin-bottom: 12px;
+  font-size: clamp(28px, 5vw, 38px);
   font-weight: 800;
-  color: var(--text-h);
+  color: var(--accent);
+  letter-spacing: -0.02em;
 }
 
 .squad-summary {
+  max-width: 62ch;
+  margin: 0 auto 20px;
+  color: var(--text);
+  text-align: center;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 16px;
-  color: var(--text);
 }
 
-.player-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 32px;
+.stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
 }
 
-.player-table th,
-.player-table td {
-  text-align: left;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
 }
 
-.player-table th {
-  color: var(--text);
-  font-weight: 500;
-  font-size: 14px;
+.stat-value {
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--text-h);
 }
+
+/* ---------- Pitch ---------- */
 
 .pitch {
   position: relative;
+  width: 100%;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 8px;
-  min-height: 360px;
+  min-height: clamp(340px, 62vw, 520px);
   padding: 16px 3%;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background: repeating-linear-gradient(to bottom, #2e8b3d, #2e8b3d 48px, #34974a 48px, #34974a 96px);
+  margin: 0 auto 16px;
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(to bottom, #2b8a3e, #2b8a3e 48px, #31964a 48px, #31964a 96px);
+  box-shadow: var(--shadow);
   overflow: hidden;
 }
 
@@ -184,8 +365,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70px;
-  height: 70px;
+  width: clamp(48px, 12vw, 84px);
+  aspect-ratio: 1;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -237,57 +418,61 @@
 }
 
 .pitch-row-label {
-  font-size: 9px;
+  font-size: clamp(8px, 1.4vw, 10px);
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .pitch-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  gap: 6px;
+  gap: clamp(4px, 1.2vw, 10px);
   width: 100%;
 }
 
+/* ---------- Bench ---------- */
+
 .bench-box {
-  background: var(--bg);
-  border: 1px dashed var(--border);
-  border-radius: 10px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 24px;
   padding: 12px;
-  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
 
 .bench-label {
+  margin-bottom: 10px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--text);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
+  color: var(--text-muted);
 }
 
 .bench-row {
   display: flex;
-  gap: 12px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: clamp(6px, 2vw, 16px);
 }
+
+/* ---------- Player cards ---------- */
 
 .player-card {
   position: relative;
-  width: 60px;
-  min-width: 44px;
-  max-width: 72px;
-  flex-shrink: 1;
-  padding: 5px 3px 3px;
-  border-radius: 8px;
+  width: clamp(48px, 11vw, 80px);
+  padding: clamp(4px, 0.8vw, 6px) 3px 3px;
+  border-radius: 9px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .card-name {
-  font-size: 10px;
+  font-size: clamp(8px, 1.5vw, 11px);
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -295,42 +480,54 @@
 }
 
 .card-team-code {
-  font-size: 8px;
+  margin-bottom: 3px;
+  font-size: clamp(7px, 1.2vw, 9px);
   font-weight: 600;
   opacity: 0.85;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 3px;
 }
 
 .card-points {
-  font-size: 12px;
-  font-weight: 800;
-  background: rgba(255, 255, 255, 0.85);
-  color: #14171c;
-  border-radius: 4px;
   padding: 1px 0;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #14171c;
+  font-size: clamp(10px, 1.7vw, 13px);
+  font-weight: 800;
+}
+
+.card-price {
+  font-size: clamp(9px, 1.4vw, 11px);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bench-row .card-price {
+  color: var(--text);
+  text-shadow: none;
 }
 
 .card-badge {
   position: absolute;
   top: -6px;
   right: -6px;
+  z-index: 2;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   font-size: 10px;
   font-weight: 800;
   color: #14171c;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  z-index: 2;
 }
 
 .card-badge.captain {
-  background: #ffd60a;
+  background: var(--gold);
 }
 
 .card-badge.vice-captain {
@@ -352,111 +549,112 @@
 .card-controls button {
   width: 22px;
   height: 22px;
+  padding: 0;
   border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
   font-size: 11px;
   font-weight: 700;
   cursor: pointer;
-  padding: 0;
 }
 
 .card-controls button:hover {
-  background: var(--accent-bg);
-  border-color: var(--accent-border);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #0b2a1b;
 }
 
 .card-button {
-  background: none;
-  border: none;
   padding: 0;
+  border: none;
+  background: none;
   cursor: pointer;
-  font: inherit;
+  transition: transform 0.12s;
 }
 
-.positive {
-  color: #1a9c4b;
+.card-button:hover {
+  transform: translateY(-2px);
 }
 
-.negative {
-  color: #d0392b;
-}
-
-.error {
-  margin-bottom: 12px;
-  color: #d0392b;
-}
+/* ---------- Transfers table ---------- */
 
 .table-scroll {
   width: 100%;
+  max-width: 820px;
+  margin: 0 auto 32px;
   overflow-x: auto;
-  margin-bottom: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
-.table-scroll .player-table {
-  margin-bottom: 0;
+.player-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-@media (max-width: 640px) {
-  .app {
-    padding: 0 12px 32px;
+.player-table th,
+.player-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.player-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.player-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.player-table th {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.player-table td {
+  color: var(--text-h);
+}
+
+.positive {
+  color: var(--positive) !important;
+  font-weight: 700;
+}
+
+.negative {
+  color: var(--negative) !important;
+  font-weight: 700;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 560px) {
+  .topbar {
+    justify-content: center;
+    text-align: center;
   }
 
-  .header-row h1 {
-    font-size: 28px;
-    margin: 20px 0;
+  .topbar-actions {
+    justify-content: center;
   }
 
   .tabs {
-    flex-wrap: wrap;
+    border-radius: 16px;
   }
 
   .tabs button {
-    flex: 1;
-    padding: 8px 6px;
-    font-size: 14px;
+    flex: 1 1 40%;
   }
 
   .pitch {
-    min-height: 320px;
     padding: 14px 4px;
-    gap: 8px;
-  }
-
-  .pitch-row,
-  .bench-row {
-    gap: 6px;
-  }
-
-  .player-card {
-    width: 46px;
-    min-width: 36px;
-    padding: 4px 2px 2px;
-  }
-
-  .card-name {
-    font-size: 8px;
-  }
-
-  .card-team-code {
-    font-size: 7px;
-  }
-
-  .card-points {
-    font-size: 10px;
-  }
-
-  .pitch-row-label {
-    font-size: 8px;
-  }
-
-  .pitch-markings .center-circle {
-    width: 48px;
-    height: 48px;
-  }
-
-  .squad-total {
-    font-size: 26px;
   }
 }

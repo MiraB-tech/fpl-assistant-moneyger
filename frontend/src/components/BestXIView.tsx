@@ -71,7 +71,7 @@ export function BestXIView({ squad, nextGw }: Props) {
   const totalPoints = xi.reduce((sum, p) => sum + p.xP * (p.id === captainId ? 2 : 1), 0)
 
   return (
-    <div>
+    <div className="view">
       <h2 className="gameweek-heading">Your best team for GW{nextGw}</h2>
       <p className="squad-total">{totalPoints.toFixed(1)} pts projected</p>
       <p className="squad-summary">
