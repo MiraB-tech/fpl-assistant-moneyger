@@ -1,126 +1,157 @@
-using System.Globalization;
 using AssistantMoneyger.Api.Fpl.Dtos;
 
 namespace AssistantMoneyger.Api.Features.Predictions;
 
-public record PlayerFeatures(
-    int Id, string Name, string Position, string Team, double Price,
-    double RecentForm, double XaXgPer90, double FixtureDifficulty, double MinutesReliability);
-
+// A player's expected points, broken into the pieces that produced it —
+// kept transparent/explainable (per the project's own stated goal) rather
+// than a single opaque number.
 public record PlayerPrediction(
     int Id, string Name, string Position, string Team, double Price,
-    double RecentForm, double XaXgPer90, double FixtureDifficulty, double MinutesReliability, double Xp);
+    double StartProbability, double CleanSheetProbability, double ExpectedGoals, double ExpectedAssists,
+    double Xp);
 
-// Pure, static, no HttpClient/DbContext — mirrors the Python pipeline's
-// build_features.py + predict.py exactly, including the fix for a real
-// bug found there: recent form must come from the previous FINISHED
-// gameweek's actual points (previousGwPoints), never a live "current
-// form" number, or it leaks in-progress results into the prediction.
-// previousGwPoints is null only for gameweek 1 (nothing earlier exists
-// yet) — that decision is made by the caller, not by this class, so this
-// class has no way to accidentally reach for a live field instead.
+// Estimates expected points using FPL's ACTUAL scoring rules (appearance,
+// goals, assists, clean sheets, goals conceded, saves) applied to
+// probabilistic estimates of what a player will do this gameweek — not
+// an abstract 0-1 ranking score. A genuine expectation blends every
+// possible outcome into one number, so e.g. a goalkeeper's clean-sheet
+// points show up as something like "1.8" (his clean-sheet chance times
+// the 4 points on offer), not a guess at either "4" or "0" alone.
 public static class XpEngine
 {
-    public const double FormWeight = 0.40;
-    public const double XgXaWeight = 0.25;
-    public const double FixtureWeight = 0.20;
-    public const double MinutesWeight = 0.15;
-
-    public static double MinutesReliability(ElementDto player) => player.Minutes / 3420.0;
-
-    public static double XaXgPer90(ElementDto player) =>
-        player.ExpectedGoalsPer90 + player.ExpectedAssistsPer90;
-
-    public static double RecentForm(ElementDto player, IReadOnlyDictionary<int, int>? previousGwPoints)
+    // FPL's real points-per-outcome table, by position.
+    private static readonly Dictionary<string, int> GoalPoints = new()
     {
-        if (previousGwPoints is null)
+        ["Goalkeeper"] = 6,
+        ["Defender"] = 6,
+        ["Midfielder"] = 5,
+        ["Forward"] = 4,
+    };
+
+    private const int AssistPoints = 3;
+
+    private static readonly Dictionary<string, int> CleanSheetPoints = new()
+    {
+        ["Goalkeeper"] = 4,
+        ["Defender"] = 4,
+        ["Midfielder"] = 1,
+        ["Forward"] = 0,
+    };
+
+    // Probability this player plays a meaningful share of the match (the
+    // ~60-minute threshold FPL itself uses for appearance/clean-sheet
+    // points), combining FPL's own injury/rotation flag with how much of
+    // the season-to-date they've actually played.
+    public static double StartProbability(ElementDto player, int gamesPlayedSoFar)
+    {
+        var fitness = (player.ChanceOfPlayingNextRound ?? 100) / 100.0;
+
+        // No games played yet this season for anyone (e.g. GW1) — can't
+        // judge from minutes, so don't let a 0-minutes signal zero out
+        // every player's prediction; treat it as a genuine unknown.
+        if (gamesPlayedSoFar <= 0)
         {
-            return double.Parse(player.PointsPerGame, CultureInfo.InvariantCulture);
+            return fitness;
         }
-        return previousGwPoints.GetValueOrDefault(player.Id, 0);
+
+        var seasonShare = Math.Clamp(player.Minutes / (gamesPlayedSoFar * 90.0), 0, 1);
+        // A player who's featured in most of the available minutes is
+        // treated as a nailed-on starter (100%) rather than punished for
+        // not literally playing every single one.
+        var reliability = Math.Min(1.0, seasonShare * 1.3);
+
+        return fitness * reliability;
     }
 
-    public static double? FixtureDifficulty(ElementDto player, IReadOnlyList<FixtureDto> fixtures, int targetGw)
+    // FPL's own fixture difficulty is already a 1 (easiest) to 5
+    // (hardest) rating of exactly this — how likely the opponent is to
+    // score/be kept out — so it's the natural, already-available input
+    // for a clean-sheet estimate rather than inventing a new one from
+    // team-strength numbers. Calibrated against typical Premier League
+    // clean-sheet rates (top team at home vs. bottom team: ~55%; hard
+    // away trip against a strong attack: ~10%) — a transparent,
+    // tunable starting point, not a fitted statistical model.
+    public static double CleanSheetProbability(int fixtureDifficulty)
+    {
+        return Math.Clamp(0.55 - (fixtureDifficulty - 1) * 0.11, 0.05, 0.55);
+    }
+
+    public static double CalculateXp(
+        ElementDto player, string position, double startProbability, double cleanSheetProbability)
+    {
+        var appearance = startProbability * 2;
+        var goals = player.ExpectedGoalsPer90 * startProbability * GoalPoints[position];
+        var assists = player.ExpectedAssistsPer90 * startProbability * AssistPoints;
+        var cleanSheet = startProbability * cleanSheetProbability * CleanSheetPoints[position];
+
+        var concededPenalty = 0.0;
+        var saves = 0.0;
+        if (position is "Goalkeeper" or "Defender")
+        {
+            // Rough Poisson-free approximation: when not kept clean, a
+            // team concedes on average ~1.6 goals — that's the -1-per-2
+            // rule's expected bite for GK/DEF.
+            var expectedGoalsConceded = (1 - cleanSheetProbability) * 1.6;
+            concededPenalty = -startProbability * (expectedGoalsConceded / 2);
+        }
+        if (position == "Goalkeeper")
+        {
+            // Facing more shots (i.e. a lower clean-sheet chance) means
+            // more save-point opportunities — a coarse stand-in for a
+            // real shots-faced model.
+            saves = startProbability * (1 - cleanSheetProbability) * 1.2;
+        }
+
+        return appearance + goals + assists + cleanSheet + concededPenalty + saves;
+    }
+
+    public static int? GetFixtureDifficulty(ElementDto player, IReadOnlyList<FixtureDto> fixtures, int targetGw)
     {
         foreach (var fixture in fixtures)
         {
             if (fixture.Event != targetGw) continue;
-            if (fixture.TeamH == player.Team) return 6 - fixture.TeamHDifficulty;
-            if (fixture.TeamA == player.Team) return 6 - fixture.TeamADifficulty;
+            if (fixture.TeamH == player.Team) return fixture.TeamHDifficulty;
+            if (fixture.TeamA == player.Team) return fixture.TeamADifficulty;
         }
         return null;
     }
 
-    public static List<PlayerFeatures> BuildFeatures(
-        BootstrapStaticDto bootstrap,
-        IReadOnlyList<FixtureDto> fixtures,
-        int targetGw,
-        IReadOnlyDictionary<int, int>? previousGwPoints)
+    public static List<PlayerPrediction> BuildPredictions(
+        BootstrapStaticDto bootstrap, IReadOnlyList<FixtureDto> fixtures, int targetGw)
     {
         var positionNames = bootstrap.ElementTypes.ToDictionary(et => et.Id, et => et.SingularName);
         var teamsById = bootstrap.Teams.ToDictionary(t => t.Id, t => t);
+        var gamesPlayedSoFar = bootstrap.Events.Count(e => e.Finished);
 
-        var features = new List<PlayerFeatures>();
+        var predictions = new List<PlayerPrediction>();
         foreach (var player in bootstrap.Elements)
         {
-            var fixtureDifficulty = FixtureDifficulty(player, fixtures, targetGw);
-            if (fixtureDifficulty is null)
+            var difficulty = GetFixtureDifficulty(player, fixtures, targetGw);
+            if (difficulty is null)
             {
                 // No fixture this gameweek (e.g. a blank gameweek) — skip
-                // this player rather than let a missing feature break the
-                // min-max normalization for everyone else.
+                // rather than guess at a made-up difficulty.
                 continue;
             }
 
-            features.Add(new PlayerFeatures(
-                Id: player.Id,
-                Name: player.WebName,
-                Position: positionNames[player.ElementType],
-                Team: teamsById[player.Team].ShortName,
-                Price: player.NowCost / 10.0,
-                RecentForm: RecentForm(player, previousGwPoints),
-                XaXgPer90: XaXgPer90(player),
-                FixtureDifficulty: fixtureDifficulty.Value,
-                MinutesReliability: MinutesReliability(player)));
-        }
+            var position = positionNames[player.ElementType];
+            var startProbability = StartProbability(player, gamesPlayedSoFar);
+            var cleanSheetProbability = CleanSheetProbability(difficulty.Value);
+            var xp = CalculateXp(player, position, startProbability, cleanSheetProbability);
 
-        return features;
-    }
-
-    public static List<PlayerPrediction> CalculateXp(IReadOnlyList<PlayerFeatures> features)
-    {
-        var (formMin, formMax) = MinMax(features, f => f.RecentForm);
-        var (xgaMin, xgaMax) = MinMax(features, f => f.XaXgPer90);
-        var (fixMin, fixMax) = MinMax(features, f => f.FixtureDifficulty);
-        var (minsMin, minsMax) = MinMax(features, f => f.MinutesReliability);
-
-        var results = new List<PlayerPrediction>();
-        foreach (var player in features)
-        {
-            var formScaled = Rescale(player.RecentForm, formMin, formMax);
-            var xgaScaled = Rescale(player.XaXgPer90, xgaMin, xgaMax);
-            var fixScaled = Rescale(player.FixtureDifficulty, fixMin, fixMax);
-            var minsScaled = Rescale(player.MinutesReliability, minsMin, minsMax);
-
-            var xp = formScaled * FormWeight
-                + xgaScaled * XgXaWeight
-                + fixScaled * FixtureWeight
-                + minsScaled * MinutesWeight;
-
-            results.Add(new PlayerPrediction(
-                player.Id, player.Name, player.Position, player.Team, player.Price,
-                player.RecentForm, player.XaXgPer90, player.FixtureDifficulty, player.MinutesReliability,
+            predictions.Add(new PlayerPrediction(
+                player.Id,
+                player.WebName,
+                position,
+                teamsById[player.Team].ShortName,
+                player.NowCost / 10.0,
+                Math.Round(startProbability, 3),
+                Math.Round(cleanSheetProbability, 3),
+                Math.Round(player.ExpectedGoalsPer90 * startProbability, 3),
+                Math.Round(player.ExpectedAssistsPer90 * startProbability, 3),
                 Math.Round(xp, 2)));
         }
 
-        return results;
+        return predictions;
     }
-
-    private static (double Min, double Max) MinMax(IReadOnlyList<PlayerFeatures> features, Func<PlayerFeatures, double> selector)
-    {
-        var values = features.Select(selector).ToList();
-        return (values.Min(), values.Max());
-    }
-
-    private static double Rescale(double value, double min, double max) => (value - min) / (max - min);
 }

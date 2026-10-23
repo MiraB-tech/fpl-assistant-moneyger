@@ -74,13 +74,13 @@ the_assistant_moneyger/
 │   │   ├── Fpl/                  # FplApiClient + DTOs — shared FPL API access, not feature-specific
 │   │   └── Features/             # one folder per use-case: Auth, Team, Gameweek, Predictions, Evaluation, Squad
 │   └── tests/AssistantMoneyger.Api.Tests/
-│       └── Features/Predictions/XpEngineTests.cs   # unit tests for the ported xP formula
+│       └── Features/Predictions/XpEngineTests.cs   # unit tests for the xP model
 ├── frontend/                    # React + TS (Vite). Own node_modules — built directly (not tutor mode).
 │   └── src/
 │       ├── types.ts             # Player, SquadPick, Squad, User — matches backend/'s JSON exactly
 │       ├── data.ts              # fetch() wrappers for backend/'s /api/* endpoints (credentials: include)
 │       ├── logic/                # pickBestXI (formation + captain picker), suggestTransfers (upgrade finder) — unchanged by the backend rewrite
-│       └── components/           # SquadView, BestXIView, TransfersView, LoginView, RegisterView, TeamSetupView
+│       └── components/           # SquadView, BestXIView, TransfersView, PitchView (+ PitchMarkings), LoginView, RegisterView, TeamSetupView
 ├── doc/                         # proposal, methodology, this-session notes
 └── CLAUDE.md
 ```
@@ -115,11 +115,29 @@ This still works standalone (evaluates the last gameweek, pulls fresh FPL data, 
 
 **v1 (Sessions 0-3, locked — see proposal.md §3 for original rationale):** transparent weighted xP formula (not ML), flat JSON/CSV storage, manual pipeline execution, React+TS frontend reading static JSON, Vercel free tier, $0 running cost.
 
-**v2 (in progress, see above):** same xP formula (ported, not changed), C#/.NET (ASP.NET Core, Vertical Slice Architecture) backend, ASP.NET Core Identity for auth, Postgres (local via Docker for dev; production host TBD), React+TS frontend unchanged except talking to the new API instead of static files.
+**v2 (in progress, see above):** xP model redesigned around FPL's real scoring rules (see below), C#/.NET (ASP.NET Core, Vertical Slice Architecture) backend, ASP.NET Core Identity for auth, Postgres (local via Docker for dev; production host TBD), React+TS frontend unchanged except talking to the new API instead of static files.
 
 Data sources (unchanged across v1/v2): official FPL API (live) — `bootstrap-static/`, `fixtures/`, `event/{gw}/live/`, `entry/{team_id}/event/{gw}/picks/`, `entry/{team_id}/`. (vaastav/Understat were considered in Session 0 but never actually integrated — FPL's own API already provides `expected_goals_per_90`/`expected_assists_per_90`.)
 
-## xP formula v1 (`doc/proposal.md` §5 — starting hypothesis, will be tuned via `model_performance_log.csv`)
+## xP model
+
+**v2 (current, `backend/.../Features/Predictions/XpEngine.cs`):** a real points expectation built from FPL's own scoring rules, not an abstract weighted score. Per player, per gameweek:
+
+```
+start_p   = fitness (chance_of_playing_next_round) × min(1, season_minutes_share × 1.3)
+cs_p      = clamp(0.55 − (fixture_difficulty − 1) × 0.11, 0.05, 0.55)
+
+xP = start_p × 2                                   # appearance
+   + xG90 × start_p × goal_points[pos]             # 6 GK/DEF, 5 MID, 4 FWD
+   + xA90 × start_p × 3                            # assists
+   + start_p × cs_p × cs_points[pos]               # 4 GK/DEF, 1 MID, 0 FWD
+   − start_p × ((1 − cs_p) × 1.6) / 2              # goals conceded, GK/DEF only
+   + start_p × (1 − cs_p) × 1.2                    # saves, GK only
+```
+
+The constants are transparent, hand-calibrated starting points (not fitted), to be tuned against the evaluation log. Players with no fixture that gameweek (blanks) are skipped.
+
+**v1 (historical, `doc/proposal.md` §5, used by `pipeline/`):**
 
 ```
 xP = (recent_form × 0.40)
@@ -140,7 +158,7 @@ data/gw{N}_predictions.json + actual GW results  →  evaluate.py  →  data/gw{
 
 **v2 (current):**
 ```
-FPL API  →  FplApiClient  →  XpEngine.BuildFeatures/CalculateXp  →  Predictions table (Postgres)
+FPL API  →  FplApiClient  →  XpEngine.BuildPredictions  →  Predictions table (Postgres)
 Predictions table + actual GW results (FplApiClient)  →  EvaluateGameweek  →  Results + ModelPerformanceLog tables
 Predictions table + a user's live FPL picks  →  GetSquad  →  Squad JSON  →  frontend (pickBestXI/suggestTransfers run client-side on this)
 ```

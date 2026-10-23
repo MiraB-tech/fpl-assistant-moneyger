@@ -25,8 +25,15 @@ function App() {
   const [authView, setAuthView] = useState<AuthView>("login")
 
   const [nextGw, setNextGw] = useState<number | null>(null)
-  const [squad, setSquad] = useState<Squad | null>(null)
-  const [allPlayers, setAllPlayers] = useState<Player[] | null>(null)
+  // The gameweek that's live/just-finished — what the "Squad" tab shows,
+  // with real points scored so far.
+  const [currentSquad, setCurrentSquad] = useState<Squad | null>(null)
+  // The upcoming gameweek — what "Best XI" and "Transfers" plan against,
+  // since those are decisions you're making ahead of that deadline, not
+  // ones already locked in.
+  const [nextSquad, setNextSquad] = useState<Squad | null>(null)
+  const [nextAllPlayers, setNextAllPlayers] = useState<Player[] | null>(null)
+
   const [error, setError] = useState<string | null>(null)
   const [tab, setTab] = useState<Tab>("squad")
   const [refreshing, setRefreshing] = useState(false)
@@ -35,20 +42,25 @@ function App() {
     getCurrentUser().then(setUser)
   }, [])
 
-  // Figures out which gameweek to show, then loads that gameweek's squad
-  // and full player pool together. Used both on first login and after a
-  // manual refresh, so both paths always end up asking FPL for the
-  // current state instead of guessing what changed.
+  // Loads whatever's available for both the current and next gameweek.
+  // Used on first login and after a manual refresh, so both paths always
+  // reflect FPL's current state instead of guessing what changed.
   async function loadGameweekData() {
     const { current_gw, next_gw } = await getCurrentGameweek()
     setNextGw(next_gw)
 
-    const displayGw = current_gw ?? next_gw
-    if (displayGw === null) return
-
-    const [s, p] = await Promise.all([loadSquad(displayGw), loadAllPlayers(displayGw)])
-    setSquad(s)
-    setAllPlayers(p)
+    await Promise.all([
+      current_gw !== null ? loadSquad(current_gw).then(setCurrentSquad) : Promise.resolve(),
+      next_gw !== null
+        ? // FPL has no "picks" record for next_gw until its deadline
+          // passes, so reuse current_gw's real picks (your actual owned
+          // squad) joined against next_gw's predictions for planning.
+          Promise.all([loadSquad(next_gw, current_gw ?? undefined), loadAllPlayers(next_gw)]).then(([s, p]) => {
+            setNextSquad(s)
+            setNextAllPlayers(p)
+          })
+        : Promise.resolve(),
+    ])
   }
 
   useEffect(() => {
@@ -81,8 +93,9 @@ function App() {
   async function handleLogout() {
     await logout()
     setUser(null)
-    setSquad(null)
-    setAllPlayers(null)
+    setCurrentSquad(null)
+    setNextSquad(null)
+    setNextAllPlayers(null)
     setNextGw(null)
   }
 
@@ -112,6 +125,8 @@ function App() {
     )
   }
 
+  const ready = currentSquad !== null && nextSquad !== null && nextAllPlayers !== null
+
   return (
     <div className="app">
       <div className="header-row">
@@ -128,7 +143,7 @@ function App() {
 
       {error && <p className="error">{error}</p>}
 
-      {!squad || !allPlayers ? (
+      {!ready ? (
         <p className="squad-summary">Loading...</p>
       ) : (
         <>
@@ -144,9 +159,9 @@ function App() {
             </button>
           </nav>
 
-          {tab === "squad" && <SquadView squad={squad} />}
-          {tab === "best-xi" && <BestXIView squad={squad} />}
-          {tab === "transfers" && <TransfersView squad={squad} allPlayers={allPlayers} />}
+          {tab === "squad" && <SquadView squad={currentSquad} />}
+          {tab === "best-xi" && nextGw !== null && <BestXIView squad={nextSquad} nextGw={nextGw} />}
+          {tab === "transfers" && <TransfersView squad={nextSquad} allPlayers={nextAllPlayers} />}
         </>
       )}
     </div>

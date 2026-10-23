@@ -30,11 +30,7 @@ public static class RefreshPredictions
             ?? throw new InvalidOperationException("FPL bootstrap-static returned nothing");
         var fixtures = await fpl.GetFixturesAsync(ct) ?? [];
 
-        var previousGw = gw - 1;
-        var previousGwPoints = previousGw >= 1 ? await fpl.GetLiveEventAsync(previousGw, ct) : null;
-
-        var features = XpEngine.BuildFeatures(bootstrap, fixtures, gw, previousGwPoints);
-        var predictions = XpEngine.CalculateXp(features);
+        var predictions = XpEngine.BuildPredictions(bootstrap, fixtures, gw);
 
         var existing = db.Predictions.Where(p => p.Gw == gw);
         db.Predictions.RemoveRange(existing);
@@ -50,10 +46,10 @@ public static class RefreshPredictions
                 Position = prediction.Position,
                 Team = prediction.Team,
                 Price = (decimal)prediction.Price,
-                RecentForm = prediction.RecentForm,
-                XaXgPer90 = prediction.XaXgPer90,
-                FixtureDifficulty = prediction.FixtureDifficulty,
-                MinutesReliability = prediction.MinutesReliability,
+                StartProbability = prediction.StartProbability,
+                CleanSheetProbability = prediction.CleanSheetProbability,
+                ExpectedGoals = prediction.ExpectedGoals,
+                ExpectedAssists = prediction.ExpectedAssists,
                 Xp = prediction.Xp,
                 ComputedAt = now,
             });

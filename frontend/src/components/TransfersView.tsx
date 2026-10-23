@@ -19,35 +19,37 @@ export function TransfersView({ squad, allPlayers }: Props) {
         Top {suggestions.length} suggested upgrade{suggestions.length > 1 ? "s" : ""}, ranked by projected points
         gained. Prices ignore FPL's sell-price tax, so treat costs as an estimate.
       </p>
-      <table className="player-table">
-        <thead>
-          <tr>
-            <th>Out</th>
-            <th>In</th>
-            <th>Position</th>
-            <th>xP gain</th>
-            <th>Cost change</th>
-          </tr>
-        </thead>
-        <tbody>
-          {suggestions.map((s) => (
-            <tr key={`${s.out.id}-${s.in.id}`}>
-              <td>
-                {s.out.name} ({s.out.team})
-              </td>
-              <td>
-                {s.in.name} ({s.in.team})
-              </td>
-              <td>{s.out.position}</td>
-              <td className="positive">+{s.xpGain.toFixed(2)}</td>
-              <td className={s.costChange > 0 ? "negative" : "positive"}>
-                {s.costChange >= 0 ? "+" : ""}
-                {s.costChange.toFixed(1)}m
-              </td>
+      <div className="table-scroll">
+        <table className="player-table">
+          <thead>
+            <tr>
+              <th>Out</th>
+              <th>In</th>
+              <th>Position</th>
+              <th>xP gain</th>
+              <th>Cost change</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {suggestions.map((s) => (
+              <tr key={`${s.out.id}-${s.in.id}`}>
+                <td>
+                  {s.out.name} ({s.out.team})
+                </td>
+                <td>
+                  {s.in.name} ({s.in.team})
+                </td>
+                <td>{s.out.position}</td>
+                <td className="positive">+{s.xpGain.toFixed(2)}</td>
+                <td className={s.costChange > 0 ? "negative" : "positive"}>
+                  {s.costChange >= 0 ? "+" : ""}
+                  {s.costChange.toFixed(1)}m
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
