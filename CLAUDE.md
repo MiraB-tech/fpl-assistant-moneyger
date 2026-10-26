@@ -79,8 +79,8 @@ the_assistant_moneyger/
 │   └── src/
 │       ├── types.ts             # Player, SquadPick, Squad, User — matches backend/'s JSON exactly
 │       ├── data.ts              # fetch() wrappers for backend/'s /api/* endpoints (credentials: include)
-│       ├── logic/                # pickBestXI (formation + captain picker), suggestTransfers (upgrade finder) — unchanged by the backend rewrite
-│       └── components/           # SquadView, BestXIView, TransfersView, PitchView (+ PitchMarkings), LoginView, RegisterView, TeamSetupView
+│       ├── logic/                # pickBestXI (formation + captain picker), suggestTransfers (upgrade finder), pickBestGwSquad (best £100m squad from the whole player pool)
+│       └── components/           # SquadView, BestXIView ("Your Best XI"), TransfersView, BestGwXIView ("Best GW{N} XI"), PitchView (+ PitchMarkings), LoginView, RegisterView, TeamSetupView
 ├── doc/                         # proposal, methodology, this-session notes
 └── CLAUDE.md
 ```
@@ -97,7 +97,7 @@ dotnet ef database update                     # applies migrations (only needed 
 dotnet run --launch-profile http               # plain HTTP on :5251 — avoids dev-cert friction
 ```
 
-`frontend/vite.config.ts` proxies `/api/*` to `http://localhost:5251`, so running `npm run dev` in `frontend/` alongside the above gives you the full app at `http://localhost:5173` with working cookie-based auth (same-origin from the browser's point of view).
+`frontend/vite.config.ts` pins the dev server to port 5173 (`strictPort` — the backend's `AllowedOrigin` only accepts that exact origin, so a silent move to 5174 would 403 every write) and proxies `/api/*` to `http://localhost:5251`, so running `npm run dev` in `frontend/` alongside the above gives you the full app at `http://localhost:5173` with working cookie-based auth (same-origin from the browser's point of view).
 
 Run tests with `dotnet test` from `backend/`. If you change `Data/Entities/` or `AppDbContext`, generate a new migration with `dotnet ef migrations add <Name>` before `dotnet ef database update`.
 
