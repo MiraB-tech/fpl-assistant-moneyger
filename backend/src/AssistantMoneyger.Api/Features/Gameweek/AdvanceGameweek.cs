@@ -20,13 +20,20 @@ public static class AdvanceGameweek
 {
     public static async Task<IResult> Handle(AdvanceRequest request, AppDbContext db, FplApiClient fpl)
     {
-        var evaluation = request.NextGw > 1
-            ? await EvaluateGameweek.RunAsync(db, fpl, request.NextGw - 1)
-            : new EvaluateResult(false, "no earlier gameweek", null);
+        // Both steps run under one lock, so a second request arriving at
+        // the same moment waits for this one, then finds both already done.
+        var response = await PredictionWriteLock.RunExclusiveAsync(db, async () =>
+        {
+            var evaluation = request.NextGw > 1
+                ? await EvaluateGameweek.RunAsync(db, fpl, request.NextGw - 1)
+                : new EvaluateResult(false, "no earlier gameweek", null);
 
-        var refresh = await RefreshPredictions.RunAsync(db, fpl, request.NextGw);
+            var refresh = await RefreshPredictions.RunAsync(db, fpl, request.NextGw);
 
-        return Results.Ok(new AdvanceResponse(request.NextGw, evaluation, refresh));
+            return new AdvanceResponse(request.NextGw, evaluation, refresh);
+        });
+
+        return Results.Ok(response);
     }
 
     public static IEndpointRouteBuilder MapGameweekEndpoints(this IEndpointRouteBuilder app)

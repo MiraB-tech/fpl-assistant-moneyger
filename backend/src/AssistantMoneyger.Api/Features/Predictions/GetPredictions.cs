@@ -38,7 +38,7 @@ public static class PredictionsEndpoints
 
         app.MapPost("/api/predictions/refresh", async (RefreshPredictionsRequest request, AppDbContext db, FplApiClient fpl) =>
         {
-            var result = await RefreshPredictions.RunAsync(db, fpl, request.Gw);
+            var result = await PredictionWriteLock.RunExclusiveAsync(db, () => RefreshPredictions.RunAsync(db, fpl, request.Gw));
             return Results.Ok(result);
         }).RequireAuthorization();
 
