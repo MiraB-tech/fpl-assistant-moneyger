@@ -72,7 +72,7 @@ public static class EvaluateGameweek
     {
         app.MapPost("/api/evaluate", async (EvaluateRequest request, AppDbContext db, FplApiClient fpl) =>
         {
-            var result = await RunAsync(db, fpl, request.Gw);
+            var result = await PredictionWriteLock.RunExclusiveAsync(db, () => RunAsync(db, fpl, request.Gw));
             return Results.Ok(result);
         }).RequireAuthorization();
 
